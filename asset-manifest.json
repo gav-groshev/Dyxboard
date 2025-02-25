@@ -1,7 +1,10 @@
 {
   "files": {
     "main.css": "/Dyxboard/static/css/main.5fe047da.css",
-    "main.js": "/Dyxboard/static/js/main.bce8b24f.js",
+    "main.js": "/Dyxboard/static/js/main.918eba3f.js",
+    "static/media/owner.jpg": "/Dyxboard/static/media/owner.eb8e70e81f2e4875167f.jpg",
+    "static/media/logo.png": "/Dyxboard/static/media/logo.f31cd58d6f0ea3c4391d.png",
+    "static/media/user-03.jpg": "/Dyxboard/static/media/user-03.50f967609eabb87a68a5.jpg",
     "static/media/group.svg": "/Dyxboard/static/media/group.925bcfdd07f0cf2d30d2f1d2ee98d23b.svg",
     "static/media/audio.svg": "/Dyxboard/static/media/audio.162f40cc2763e7b8ea32a7f09257f3d8.svg",
     "static/media/shooting-star.svg": "/Dyxboard/static/media/shooting-star.6efc8f52581f3437eeefaaa709f7f9dd.svg",
@@ -56,10 +59,10 @@
     "static/media/chevron-down.svg": "/Dyxboard/static/media/chevron-down.4d973c359d3a17d6ac4a7555d4334dd7.svg",
     "static/media/chevron-up.svg": "/Dyxboard/static/media/chevron-up.98ffe24aa018d662623f535a8227f58e.svg",
     "main.5fe047da.css.map": "/Dyxboard/static/css/main.5fe047da.css.map",
-    "main.bce8b24f.js.map": "/Dyxboard/static/js/main.bce8b24f.js.map"
+    "main.918eba3f.js.map": "/Dyxboard/static/js/main.918eba3f.js.map"
   },
   "entrypoints": [
     "static/css/main.5fe047da.css",
-    "static/js/main.bce8b24f.js"
+    "static/js/main.918eba3f.js"
   ]
 }
