@@ -7,7 +7,7 @@ import "swiper/css/pagination";
 import "swiper/css/autoplay";
 import App from "./app/App";
 import { ThemeProvider } from "./context/ThemeContext";
-import { AppWrapper } from "./components/common/PageMeta";
+import { AppWrapper } from "./app/layout/PageMeta";
 
 const root = ReactDOM.createRoot(
   document.getElementById("root") as HTMLElement
