@@ -1,5 +1,5 @@
 import React, { useEffect, useRef, useState } from "react";
-import { ThemeToggleButton } from "../common/ThemeToggleButton";
+import { DarkModeSwitcher } from "../common/DarkModeSwitcher/DarkModeSwitcher";
 import { Link } from "react-router";
 import NotificationDropdown from "./NotificationDropdown";
 import UserDropdown from "./UserDropdown";
@@ -173,7 +173,7 @@ const Header: React.FC<HeaderProps> = ({ onClick, onToggle }) => {
         >
           <div className="flex items-center gap-2 2xsm:gap-3">
             {/* <!-- Dark Mode Toggler --> */}
-            <ThemeToggleButton />
+            <DarkModeSwitcher />
             {/* <!-- Dark Mode Toggler --> */}
             <NotificationDropdown />
             {/* <!-- Notification Menu Area --> */}

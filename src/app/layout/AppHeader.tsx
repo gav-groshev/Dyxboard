@@ -2,7 +2,7 @@ import React, { useEffect, useRef, useState } from "react";
 
 import { Link } from "react-router";
 import { useSidebar } from "../../context/SidebarContext";
-import { ThemeToggleButton } from "../../components/common/ThemeToggleButton";
+import { DarkModeSwitcher } from "../../components/common/DarkModeSwitcher/DarkModeSwitcher";
 import NotificationDropdown from "../../components/header/NotificationDropdown";
 import UserDropdown from "../../components/header/UserDropdown";
 import logo from "../../assets/images/logo/logo.png";
@@ -159,7 +159,7 @@ const AppHeader: React.FC = () => {
         >
           <div className="flex items-center gap-2 2xsm:gap-3">
             {/* <!-- Dark Mode Toggler --> */}
-            <ThemeToggleButton />
+            <DarkModeSwitcher />
             {/* <!-- Dark Mode Toggler --> */}
             <NotificationDropdown />
             {/* <!-- Notification Menu Area --> */}
