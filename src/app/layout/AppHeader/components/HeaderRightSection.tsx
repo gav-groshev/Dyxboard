@@ -1,8 +1,8 @@
 import React from "react";
 import { DarkModeSwitcher } from "../../DarkModeSwitcher/DarkModeSwitcher";
-import NotificationDropdown from "../../../../components/header/NotificationDropdown";
-import UserDropdown from "../../../../components/header/UserDropdown";
+import UserDropdownMenu from "../../../../components/UserDropdown/UserDropdown";
 import "../AppHeader.css";
+import DropdownMenu from "../../../../components/DropdownMenu/DropdownMenu";
 
 interface HeaderRightSectionProps {
   isApplicationMenuOpen: boolean;
@@ -17,9 +17,9 @@ const HeaderRightSection: React.FC<HeaderRightSectionProps> = ({ isApplicationMe
     >
       <div className="flex items-center gap-2 2xsm:gap-3">
         <DarkModeSwitcher />
-        <NotificationDropdown />
+        <DropdownMenu />
       </div>
-      <UserDropdown />
+      <UserDropdownMenu />
     </div>
   );
 };

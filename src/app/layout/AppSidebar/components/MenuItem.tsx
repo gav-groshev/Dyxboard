@@ -1,6 +1,6 @@
 import { Link } from "react-router";
 import { ChevronDownIcon } from "../../../../assets/icons";
-import { MenuItemProps, NavItem } from "../types";
+import { MenuItemProps } from "../types";
 
 export const MenuItem = ({
   item,

@@ -1,15 +1,6 @@
 import type React from "react";
 import { Link } from "react-router";
-
-interface DropdownItemProps {
-  tag?: "a" | "button";
-  href?: string;
-  onClick?: () => void;
-  onItemClick?: () => void;
-  baseClassName?: string;
-  className?: string;
-  children: React.ReactNode;
-}
+import { DropdownItemProps } from "./types";
 
 export const DropdownItem: React.FC<DropdownItemProps> = ({
   tag = "button",
