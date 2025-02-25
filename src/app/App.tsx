@@ -6,7 +6,7 @@ import MainPage from "../pages/MainPage";
 export default function App() {
   return (
     <>
-      <Router>
+      <Router basename="/Dyxboard">
         <Routes>
           <Route element={<AppLayout />}>
             <Route path="/" element={<MainPage />}/>
