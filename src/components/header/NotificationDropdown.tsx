@@ -2,10 +2,10 @@ import React, { useState } from "react";
 import { Dropdown } from "../ui/dropdown/Dropdown";
 import { DropdownItem } from "../ui/dropdown/DropdownItem";
 import { Link } from "react-router";
-import userImage2 from './assets/user-02.jpg';
-import userImage3 from './assets/user-03.jpg';
-import userImage4 from './assets/user-04.jpg';
-import userImage5 from './assets/user-05.jpg';
+import userImage2 from '../../assets/images/user/user-02.jpg';
+import userImage3 from '../../assets/images/user/user-03.jpg';
+import userImage4 from '../../assets/images/user/user-04.jpg';
+import userImage5 from '../../assets/images/user/user-05.jpg';
 
 
 export default function NotificationDropdown() {

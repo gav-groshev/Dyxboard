@@ -5,7 +5,7 @@ import { useSidebar } from "../../context/SidebarContext";
 import { ThemeToggleButton } from "../../components/common/ThemeToggleButton";
 import NotificationDropdown from "../../components/header/NotificationDropdown";
 import UserDropdown from "../../components/header/UserDropdown";
-import logo from "../../assets/logo.png";
+import logo from "../../assets/images/logo/logo.png";
 const AppHeader: React.FC = () => {
   const [isApplicationMenuOpen, setApplicationMenuOpen] = useState(false);
 
@@ -82,16 +82,18 @@ const AppHeader: React.FC = () => {
             {/* Cross Icon */}
           </button>
 
-          <Link to="/" className="lg:hidden">
+          <Link to="/" className="logo lg:hidden">
             <img
               className="dark:hidden"
               src={logo}
               alt="Logo"
+              width={40}
             />
             <img
               className="hidden dark:block"
               src={logo}
               alt="Logo"
+              width={40}
             />
           </Link>
 
