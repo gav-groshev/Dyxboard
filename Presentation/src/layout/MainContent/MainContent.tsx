@@ -1,7 +1,6 @@
 import React from "react";
 import { Outlet, useLocation } from "react-router-dom";
 import { PageHeader } from "./PageHeader";
-import { AppRoutes } from "../../routes/AppRoutes";
 import { menuCategories, type MenuItem } from "../menuCategories";
 import './MainContent.css';
 
@@ -26,7 +25,6 @@ return (
         {currentRoute && (
           <PageHeader title={currentRoute.label} />
         )}
-        <AppRoutes />
         <Outlet />
       </main>
     </div>
