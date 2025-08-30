@@ -22,7 +22,7 @@ export const ProfileDropdown = () => {
       <li><a className="dropdown-item" href="#"><FontAwesomeIcon icon={faGear} /> Account settings</a></li>
       <li><a className="dropdown-item" href="#"><FontAwesomeIcon icon={faCircleInfo} /> Support</a></li>
       <li><hr className="dropdown-divider" /></li>
-      <li><a className="dropdown-item" href="signin.html"><FontAwesomeIcon icon={faArrowRightFromBracket} /> Sign out</a></li>
+      <li><a className="dropdown-item" href="/signin"><FontAwesomeIcon icon={faArrowRightFromBracket} /> Sign out</a></li>
     </>
   );
 

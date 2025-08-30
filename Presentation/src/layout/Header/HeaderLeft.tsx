@@ -1,7 +1,7 @@
 import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faAlignLeft, faMagnifyingGlass } from '@fortawesome/free-solid-svg-icons';
-import { IconInput } from '../../components/Inputs/IconInput/IconInput';
+import { Input } from '../../components/Inputs/Input';
 
 interface HeaderLeftProps {
   toggleSidebar: () => void;
@@ -13,7 +13,8 @@ export const HeaderLeft: React.FC<HeaderLeftProps> = ({ toggleSidebar }) => {
       <button onClick={toggleSidebar} className="btn btn-outline-secondary me-2 sidebar-toggle">
         <FontAwesomeIcon icon={faAlignLeft} />
       </button>
-      <IconInput
+      <Input
+        className='search-input'
         placeholder="Search or type command..."
         icon={faMagnifyingGlass}
       />

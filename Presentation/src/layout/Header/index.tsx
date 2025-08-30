@@ -1,20 +1,14 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { HeaderLeft } from './HeaderLeft';
 import { HeaderRight } from './HeaderRight';
+import { useTheme } from '../ThemeContext';
 
 interface HeaderProps {
   toggleSidebar: () => void;
 }
 
 export const Header: React.FC<HeaderProps> = ({ toggleSidebar }) => {
-  const [theme, setTheme] = useState<'light' | 'dark'>('light');
-
-  const toggleTheme = () => {
-    const html = document.documentElement;
-    const newTheme = theme === 'light' ? 'dark' : 'light';
-    html.setAttribute('data-bs-theme', newTheme);
-    setTheme(newTheme);
-  };
+  const { theme, toggleTheme } = useTheme();
 
   return (
     <header className="d-flex justify-content-between border-bottom align-items-center bg-body w-100 px-3 py-2">

@@ -8,15 +8,23 @@
 [data-bs-theme="light"] .menu-item:hover,
 [data-bs-theme="light"] #toggleSidebar:hover,
 [data-bs-theme="light"] .notification-panel:hover,
-[data-bs-theme="light"] .theme-toggle:hover{
+[data-bs-theme="light"] .info-panel .theme-toggle:hover{
     background-color:rgb(242 244 247);
     color: #344054;
+}
+
+[data-bs-theme="light"] .auth-page .theme-toggle:hover{
+    background-color:rgb(11, 97, 223);
+}
+
+[data-bs-theme="dark"] .auth-page .theme-toggle:hover{
+    background-color:rgb(11, 97, 223);
 }
 
 [data-bs-theme="dark"] .menu-item:hover,
 [data-bs-theme="dark"] #toggleSidebar:hover,
 [data-bs-theme="dark"] .notification-panel:hover,
-[data-bs-theme="dark"] .theme-toggle:hover{
+[data-bs-theme="dark"] .info-panel .theme-toggle:hover{
     background-color:#ffffff0d;
 }
 

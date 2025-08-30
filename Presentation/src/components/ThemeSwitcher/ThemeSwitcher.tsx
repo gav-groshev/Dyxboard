@@ -4,14 +4,18 @@ import { faMoon, faSun } from "@fortawesome/free-regular-svg-icons";
 
 interface ThemeSwitcherProps {
   theme: "light" | "dark";
+  isPrimary?: boolean;
+  className? : string;
   toggleTheme: () => void;
 }
 
-export const ThemeSwitcher: React.FC<ThemeSwitcherProps> = ({ theme, toggleTheme }) => {
+export const ThemeSwitcher: React.FC<ThemeSwitcherProps> = ({ theme, isPrimary = false, className, toggleTheme}) => {
+  
+  const btnClass = isPrimary? 'btn-primary' : 'btn-circle';
   return (
     <button
       onClick={toggleTheme}
-      className="btn btn-circle btn-outline-secondary me-3 theme-toggle"
+      className={`btn ${btnClass} btn-outline-secondary me-3 ${className} theme-toggle`}
     >
       <FontAwesomeIcon icon={theme === "light" ? faMoon : faSun} />
     </button>

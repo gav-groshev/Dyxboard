@@ -9,29 +9,30 @@ body {
     line-height: 1.5rem;
 }
 
- body, html {
-      height: 100%;
-    }
-
-    html, body, #root {
+html, body, #root {
   width: 100%;
+  height:100%;
   margin: 0;
   padding: 0;
 }
-    .theme-toggle {
-      bottom: 20px;
-      right: 20px;
-      border-radius: 50%;
-      width: 50px;
-      height: 50px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-    .bg-side {
-      background-color: #0d1b61;
-      color: white;
-    }
+.theme-toggle {
+  bottom: 20px;
+  right: 20px;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.auth-page .theme-toggle{
+  color:white;
+}
+.bg-side {
+  background-color: #0d1b61;
+  color: white;
+}
 /* =======================================
    Настройки текста
 ======================================= */
@@ -339,3 +340,7 @@ main {
       border-bottom: 2px solid #4361ee;
       background: transparent;
     }
+
+.menu-item {
+  transition: none !important;
+}

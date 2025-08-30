@@ -5,11 +5,13 @@ import { ProfilePage } from "../features/Profile";
 import TaskList from "../features/TaskList";
 import { KanbanPage } from "../features/Kanban";
 import { AppLayout } from "../layout/AppLayout";
+import { SignInPage } from "../features/Auth/SignInPage";
 
 export const AppRoutes = () => (
   <Routes>
     {/* Public */}
     <Route path="/login" element={<LoginPage />} />
+    <Route path="/signin" element={<SignInPage />} />
 
     {/* Private (общий каркас) */}
     <Route element={<AppLayout />}>
