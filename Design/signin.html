@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Sign In - TailAdmin</title>
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="assets/vendor/fontawesome/css/all.min.css"/>
+      <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/main.css"/>
+  <style>
+
+  </style>
+</head>
+<body>
+  <div class="container-fluid h-100">
+    <div class="row h-100">
+      <!-- Левая часть (форма входа) -->
+      <div class="col-lg-6 d-flex flex-column justify-content-center align-items-center p-5">
+        <div class="w-100" style="max-width: 400px;">
+          <a href="index.html" class="mb-3 d-inline-block">&larr; Back to dashboard</a>
+          <h2 class="fw-bold mb-3">Sign In</h2>
+          <p class="mb-4">Enter your email and password to sign in!</p>
+
+          <div class="d-grid gap-2 mb-3">
+            <button class="btn btn-outline-secondary"><img src="https://www.svgrepo.com/show/475656/google-color.svg" width="18" class="me-2"> Sign in with Google</button>
+            <button class="btn btn-outline-secondary"><img src="https://www.svgrepo.com/show/475689/twitter-color.svg" width="18" class="me-2"> Sign in with X</button>
+          </div>
+
+          <div class="text-center my-3">Or</div>
+
+          <form>
+            <div class="mb-3">
+              <label class="form-label">Email <span class="text-danger">*</span></label>
+              <input type="email" class="form-control" placeholder="info@gmail.com" required>
+            </div>
+            <div class="mb-3">
+              <label class="form-label">Password <span class="text-danger">*</span></label>
+              <div class="input-group">
+                <input type="password" class="form-control" placeholder="Enter your password" required>
+                <button class="btn btn-outline-secondary" type="button"><i class="fa-regular fa-eye"></i></button>
+              </div>
+            </div>
+            <div class="d-flex justify-content-between align-items-center mb-3">
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" id="remember">
+                <label class="form-check-label" for="remember">Keep me logged in</label>
+              </div>
+              <a href="#">Forgot password?</a>
+            </div>
+            <div class="d-grid">
+              <button type="submit" class="btn btn-primary">Sign in</button>
+            </div>
+          </form>
+
+          <p class="mt-3 text-center">Don't have an account? <a href="#">Sign Up</a></p>
+        </div>
+      </div>
+
+      <!-- Правая часть (баннер) -->
+      <div class="col-lg-6 d-none d-lg-flex flex-column justify-content-center align-items-center bg-side">
+        <h2 class="fw-bold">TailAdmin</h2>
+        <p class="text-light">Free and Open-Source Tailwind CSS Admin Dashboard Template</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Кнопка переключения темы -->
+  <button id="themeToggle" class="btn btn-primary position-absolute theme-toggle">
+    <i class="fa-regular fa-moon"></i>
+  </button>
+
+    <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+  <script>
+    const toggleBtn = document.getElementById('themeToggle');
+    const htmlEl = document.documentElement;
+
+    toggleBtn.addEventListener('click', () => {
+      const currentTheme = htmlEl.getAttribute('data-bs-theme');
+      if (currentTheme === 'light') {
+        htmlEl.setAttribute('data-bs-theme', 'dark');
+        toggleBtn.innerHTML = '<i class="fa-regular fa-sun"></i>';
+      } else {
+        htmlEl.setAttribute('data-bs-theme', 'light');
+        toggleBtn.innerHTML = '<i class="fa-regular fa-moon"></i>';
+      }
+    });
+  </script>
+</body>
+</html>

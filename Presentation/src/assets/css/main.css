@@ -1,0 +1,341 @@
+/* =======================================
+   Общие настройки страницы
+======================================= */
+body {
+    overflow-x: hidden;
+    font-family: 'Outfit', sans-serif;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5rem;
+}
+
+ body, html {
+      height: 100%;
+    }
+
+    html, body, #root {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+    .theme-toggle {
+      bottom: 20px;
+      right: 20px;
+      border-radius: 50%;
+      width: 50px;
+      height: 50px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .bg-side {
+      background-color: #0d1b61;
+      color: white;
+    }
+/* =======================================
+   Настройки текста
+======================================= */
+.text-regular {
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 20px;
+}
+
+/* =======================================
+   Кнопки
+======================================= */
+.btn-circle {
+    width: 40px;
+    height: 40px;
+    padding: 0;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.dropdown-toggle:focus {
+    outline: none;
+    box-shadow: none; /* убираем тень при фокусе */
+    border: 0;
+}
+
+/* =======================================
+   Боковое меню / sidebar
+======================================= */
+.sidebar {
+    min-height: 100vh;
+    transition: all 0.3s;
+}
+
+.sidebar.collapsed {
+    width: 60px !important;
+}
+
+.sidebar.collapsed .menu-text {
+    display: none;
+}
+
+.content {
+    padding: 20px;
+}
+
+.sidebar-logo {
+    width: 100%;
+    height: auto;
+}
+
+/* =======================================
+   Профиль / аватар
+======================================= */
+.profilePhoto {
+    width: 40px;
+    height: 40px;
+}
+
+.profile-info {
+    color: rgb(52 64 84);
+}
+
+.profile-info small {
+    font-size: 12px;
+    color: rgb(102 112 133);
+}
+
+/* =======================================
+   Меню и подписи
+======================================= */
+.menu-text {
+    font-size: .75rem;
+    color: rgb(152 162 179);
+}
+
+/* =======================================
+   Dropdown / выпадающие меню
+======================================= */
+.dropdown-toggle-custom::after {
+    display: none;
+}
+
+.dropdown-icon {
+    transition: transform 0.3s;
+}
+
+.dropdown .dropdown-toggle-custom.show .dropdown-icon {
+    transform: rotate(180deg);
+}
+
+.dropdown-menu-wide {
+    min-width: 250px;
+    max-width: 350px;
+    border-radius: 5%;
+    color: rgb(52 64 84);
+}
+
+.dropdown-menu-wide .icon {
+    margin-right: 7px;
+}
+
+/* =======================================
+   Содержимое страницы
+======================================= */
+main {
+    margin-left: 50px; 
+    margin-right: 50px;
+}
+
+ /* Стили для уведомлений */
+    .notification-btn{
+        position:relative;
+    }
+    .notification-dropdown {
+      width: 350px;
+      max-height: 400px;
+      overflow-y: auto;
+      border-radius: 12px;
+      box-shadow: 0 4px 16px rgba(0,0,0,0.1);
+    }
+
+    .notification-item {
+      display: flex;
+      align-items: flex-start;
+      padding: 10px;
+      border-bottom: 1px solid #f1f1f1;
+    }
+
+    .notification-item:last-child {
+      border-bottom: none;
+    }
+
+    .notification-avatar {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      margin-right: 10px;
+      position: relative;
+    }
+
+    .notification-counter{
+        position:absolute;
+        top:0;
+        left:20px;
+    }
+    .status-dot {
+      position: absolute;
+      bottom: 30px;
+      right: 0;
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      border: 2px solid #fff;
+    }
+
+    .status-online {
+      background-color: #28a745;
+    }
+
+    .status-offline {
+      background-color: #dc3545;
+    }
+
+    .notification-text {
+      flex-grow: 1;
+      font-size: 14px;
+    }
+
+    .notification-text strong {
+      color: #000;
+    }
+
+    .notification-time {
+      font-size: 12px;
+      color: #888;
+    }
+
+    .view-all {
+      text-align: center;
+      padding: 10px;
+      background: #f9f9f9;
+    }
+
+    .view-all a {
+      text-decoration: none;
+      color: #007bff;
+      font-weight: 500;
+    }
+
+    /* Кастомный скроллбар */
+    .notification-dropdown::-webkit-scrollbar {
+      width: 8px;
+    }
+
+    .notification-dropdown::-webkit-scrollbar-track {
+      background: #f1f1f1;
+      border-radius: 10px;
+    }
+
+    .notification-dropdown::-webkit-scrollbar-thumb {
+      background: #bbb;
+      border-radius: 10px;
+      transition: background 0.3s;
+    }
+
+    .notification-dropdown::-webkit-scrollbar-thumb:hover {
+      background: #888;
+    }
+
+    /* Firefox */
+    .notification-dropdown {
+      scrollbar-width: thin;
+      scrollbar-color: #bbb #f1f1f1;
+    }
+
+.main-content{
+    padding:30px;
+}
+.card {
+      border-radius: 12px;
+      border: 1px solid #e9ecef;
+    }
+    .profile-avatar {
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+      object-fit: cover;
+    }
+    .btn-edit {
+      border-radius: 20px;
+      padding: 4px 12px;
+      font-size: 14px;
+    }
+    .social-icons .btn {
+      border-radius: 50%;
+      width: 40px;
+      height: 40px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 18px;
+    }
+    @media (max-width: 768px) {
+      .profile-avatar {
+        width: 60px;
+        height: 60px;
+      }
+    }
+
+    .card {
+      border-radius: 12px;
+      border: 1px solid #e9ecef;
+      margin-bottom: 10px;
+    }
+    .task-item {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 12px 16px;
+    }
+    .task-left {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .task-label {
+      font-size: 14px;
+      padding: 3px 10px;
+      border-radius: 8px;
+      background: #eef3ff;
+      color: #4361ee;
+      font-weight: 500;
+    }
+    .task-meta {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-size: 14px;
+      color: #6c757d;
+    }
+    .avatar {
+      width: 28px;
+      height: 28px;
+      border-radius: 50%;
+      object-fit: cover;
+    }
+    .btn-filter {
+      border-radius: 8px;
+      font-size: 14px;
+    }
+    .btn-add {
+      border-radius: 8px;
+      font-size: 14px;
+    }
+    .nav-tabs .nav-link {
+      border: none;
+      color: #6c757d;
+      font-weight: 500;
+    }
+    .nav-tabs .nav-link.active {
+      color: #4361ee;
+      border-bottom: 2px solid #4361ee;
+      background: transparent;
+    }

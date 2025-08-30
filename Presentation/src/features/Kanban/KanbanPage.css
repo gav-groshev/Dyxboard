@@ -1,0 +1,16 @@
+    .kanban-column {
+      min-width: 280px;
+    }
+    .card-task {
+      border-radius: 12px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+      margin-bottom: 1rem;
+      font-family: Outfit, sans-serif;
+      font-weight:400;
+    }
+
+    .card-task .badge{
+      display: inline-block; /* или inline, если нужно */
+      width: auto;           /* чтобы не растягивался */
+      align-self: flex-start; /* если родитель flex */
+    }

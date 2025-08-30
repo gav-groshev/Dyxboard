@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Dashboard</title>
+  
+  <!-- Bootstrap CSS -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="assets/vendor/fontawesome/css/all.min.css"/>
+  <link rel="stylesheet" href="assets/css/main.css"/>
+  <link rel="stylesheet" href="assets/css/theme.css"/>
+  <link rel="stylesheet" href="assets/css/responsive.css"/>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="container-fluid">
+    <div class="row">
+
+      <!-- Sidebar -->
+      <aside id="sidebar" class="col-md-2 col-lg-2 sidebar p-3 border-end">
+        <header class="d-flex align-items-center mb-4">
+          <img src="assets/img/logo_light_w_text.png" id="sidebarLogo" class="sidebar-logo me-2" alt="Logo">
+        </header>
+        <nav>
+          <h6 class="menu-text mb-3">MENU</h6>
+          <ul class="nav flex-column">
+            <li class="nav-item mb-2">
+              <a href="index.html" class="nav-link d-flex align-items-center menu-item">
+                <i class="fa-regular fa-house me-2"></i>
+                <span>MainPage</span>
+              </a>
+            </li>
+            <li class="nav-item mb-2">
+              <a href="todo.html" class="nav-link d-flex align-items-center menu-item">
+                <i class="fa-solid fa-list-check"></i>
+                <span>Task List</span>
+              </a>
+            </li>
+          </ul>
+          <h6 class="menu-text mt-4">OTHERS</h6>
+        </nav>
+      </aside>
+
+      <div class="col bg-light-subtle content p-0">
+        <header class="d-flex justify-content-between border-bottom align-items-center bg-body w-100 px-3 py-2">
+
+          <!-- Левая группа: кнопка меню + поиск -->
+          <div class="d-flex align-items-center mb-2 mb-lg-0 top-bar-left">
+            <button class="btn btn-outline-secondary me-2" id="toggleSidebar">
+              <i class="fa-solid fa-align-left"></i>
+            </button>
+            <div class="input-group search-input search-panel">
+              <span class="input-group-text"><i class="fa-solid fa-magnifying-glass"></i></span>
+              <input type="text" class="form-control" placeholder="Search or type command...">
+            </div>
+          </div>
+
+          <!-- Правая группа: тема, уведомления, профиль -->
+          <div class="d-flex align-items-center top-bar-right info-panel">
+            <button id="themeToggle" class="btn btn-circle btn-outline-secondary me-3 theme-toggle">
+              <i class="fa-regular fa-moon"></i>
+            </button>
+            <button class="btn btn-circle btn-outline-secondary me-3 notification-panel notification-btn" id="notificationDropdownToggle" data-bs-toggle="dropdown">
+              <i class="fa-solid fa-bell"></i>
+              <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger notification-counter">
+                4
+              </span>
+            </button>
+            <!-- Кнопка-звоночек -->
+          <div class="dropdown">
+            <!-- Выпадающее меню -->
+            <ul class="dropdown-menu dropdown-menu-end notification-dropdown" aria-labelledby="notificationDropdown">
+              <li class="notification-item">
+                <div class="notification-avatar">
+                  <img src="https://i.pravatar.cc/40?img=1" class="img-fluid rounded-circle">
+                  <span class="status-dot status-online"></span>
+                </div>
+                <div class="notification-text">
+                  <strong>Terry Franci</strong> requests permission to change <strong>Project - Nganter App</strong>
+                  <div class="notification-time">5 min ago</div>
+                </div>
+              </li>
+              <li class="notification-item">
+                <div class="notification-avatar">
+                  <img src="https://i.pravatar.cc/40?img=2" class="img-fluid rounded-circle">
+                  <span class="status-dot status-online"></span>
+                </div>
+                <div class="notification-text">
+                  <strong>Alena Franci</strong> requests permission to change <strong>Project - Nganter App</strong>
+                  <div class="notification-time">8 min ago</div>
+                </div>
+              </li>
+              <li class="notification-item">
+                <div class="notification-avatar">
+                  <img src="https://i.pravatar.cc/40?img=3" class="img-fluid rounded-circle">
+                  <span class="status-dot status-online"></span>
+                </div>
+                <div class="notification-text">
+                  <strong>Jocelyn Kenter</strong> requests permission to change <strong>Project - Nganter App</strong>
+                  <div class="notification-time">15 min ago</div>
+                </div>
+              </li>
+              <li class="notification-item">
+                <div class="notification-avatar">
+                  <img src="https://i.pravatar.cc/40?img=4" class="img-fluid rounded-circle">
+                  <span class="status-dot status-offline"></span>
+                </div>
+                <div class="notification-text">
+                  <strong>Brandon Philips</strong> requests permission to change <strong>Project - Nganter App</strong>
+                  <div class="notification-time">1 hr ago</div>
+                </div>
+              </li>
+              <li class="view-all">
+                <a href="#">View All Notifications</a>
+              </li>
+            </ul>
+          </div>
+            <div class="dropdown">
+            <!-- Кнопка профиля -->
+            <div class="d-flex align-items-center text-decoration-none dropdown-toggle-custom" 
+                    type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                <img src="assets/img/owner.png" alt="Profile" class="rounded-circle me-2 profilePhoto">
+                <span>A. Groshev</span>
+                <i class="fa-solid fa-chevron-down ms-2 dropdown-icon"></i>
+            </div>
+
+            <!-- Содержимое dropdown -->
+            <ul class="dropdown-menu dropdown-menu-end dropdown-menu-wide">
+                <li class="px-3 py-2 profile-info">
+                <div class="text-regular fw-bold">A. Groshev</div>
+                <small>gav.groshev@gmail.com</small>
+                </li>
+                <li><a class="dropdown-item" href="#"><i class="fa-solid fa-user me-2"></i>Edit profile</a></li>
+                <li><a class="dropdown-item" href="#"><i class="fa-solid fa-gear me-2"></i>Account settings</a></li>
+                <li><a class="dropdown-item" href="#"><i class="fa-solid fa-circle-info me-2"></i>Support</a></li>
+                <li><hr class="dropdown-divider"></li>
+                <li><a class="dropdown-item" href="signin.html"><i class="fa-solid fa-arrow-right-from-bracket me-2"></i>Sign out</a></li>
+            </ul>
+            </div>
+
+          </div>
+        </header>
+      <!-- Main Content -->
+      <main class="col content">
+          <div class="d-flex justify-content-between align-items-center mb-4">
+            <h5 class="fw-bold">Task List</h5>
+            <nav aria-label="breadcrumb">
+              <ol class="breadcrumb mb-0">
+                <li class="breadcrumb-item"><a href="#">Home</a></li>
+                <li class="breadcrumb-item active" aria-current="page">Task List</li>
+              </ol>
+            </nav>
+          </div>
+          <div class="card main-content">
+              <div class="container">
+
+    <!-- Фильтры -->
+    <div class="card mb-4 p-3">
+      <div class="d-flex flex-wrap justify-content-between align-items-center">
+        <ul class="nav nav-tabs mb-2 mb-md-0">
+          <li class="nav-item"><a class="nav-link active" href="#">All Tasks <span class="badge bg-light text-dark">14</span></a></li>
+          <li class="nav-item"><a class="nav-link" href="#">To Do <span class="badge bg-light text-dark">3</span></a></li>
+          <li class="nav-item"><a class="nav-link" href="#">In Progress <span class="badge bg-light text-dark">4</span></a></li>
+          <li class="nav-item"><a class="nav-link" href="#">Completed <span class="badge bg-light text-dark">4</span></a></li>
+        </ul>
+        <div class="d-flex gap-2">
+          <button class="btn btn-outline-secondary btn-filter"><i class="bi bi-funnel"></i> Filter & Sort</button>
+          <button class="btn btn-primary btn-add"><i class="bi bi-plus-lg"></i> Add New Task</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Секция Todo -->
+    <h6 class="fw-bold mb-2">Todo <span class="text-muted">3</span></h6>
+    <div class="card">
+      <div class="task-item">
+        <div class="task-left">
+          <i class="fa-solid fa-bars"></i>
+          <input type="checkbox" class="form-check-input">
+          <span>Finish user onboarding</span>
+        </div>
+        <div class="task-meta">
+          <span class="task-label">Marketing</span>
+          <span><i class="bi bi-calendar-event"></i> Tomorrow</span>
+          <span><i class="bi bi-chat-dots"></i> 1</span>
+          <img src="https://i.pravatar.cc/28?img=1" class="avatar" alt="user">
+        </div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="task-item">
+        <div class="task-left">
+          <i class="fa-solid fa-bars"></i>
+          <input type="checkbox" class="form-check-input">
+          <span>Solve the Dribble prioritization issue with the team</span>
+        </div>
+        <div class="task-meta">
+          <span class="task-label">Marketing</span>
+          <span><i class="bi bi-calendar-event"></i> Tomorrow</span>
+          <span><i class="bi bi-chat-dots"></i> 2</span>
+          <img src="https://i.pravatar.cc/28?img=2" class="avatar" alt="user">
+        </div>
+      </div>
+    </div>
+
+    <!-- Секция In Progress -->
+    <h6 class="fw-bold mt-4 mb-2">In Progress <span class="text-muted">4</span></h6>
+    <div class="card">
+      <div class="task-item">
+        <div class="task-left">
+          <i class="fa-solid fa-bars"></i>
+          <input type="checkbox" class="form-check-input">
+          <span>Work in Progress (WIP) Dashboard</span>
+        </div>
+        <div class="task-meta">
+          <span class="task-label">Template</span>
+          <span><i class="bi bi-calendar-event"></i> Jan 8, 2027</span>
+          <img src="https://i.pravatar.cc/28?img=3" class="avatar" alt="user">
+        </div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="task-item">
+        <div class="task-left">
+          <i class="fa-solid fa-bars"></i>
+          <input type="checkbox" class="form-check-input">
+          <span>Product Update - Q4 2024</span>
+        </div>
+        <div class="task-meta">
+          <span><i class="bi bi-calendar-event"></i> Jan 8, 2027</span>
+          <span><i class="bi bi-chat-dots"></i> 2</span>
+          <img src="https://i.pravatar.cc/28?img=4" class="avatar" alt="user">
+        </div>
+      </div>
+    </div>
+
+    <!-- Секция Completed -->
+    <h6 class="fw-bold mt-4 mb-2">Completed <span class="text-muted">4</span></h6>
+    <div class="card">
+      <div class="task-item">
+        <div class="task-left">
+          <i class="fa-solid fa-bars"></i>
+          <input type="checkbox" class="form-check-input" checked>
+          <span class="text-decoration-line-through">Do some projects on React Native with Flutter</span>
+        </div>
+        <div class="task-meta">
+          <span class="task-label">Marketing</span>
+          <span><i class="bi bi-calendar-event"></i> Feb 12, 2024</span>
+          <img src="https://i.pravatar.cc/28?img=5" class="avatar" alt="user">
+        </div>
+      </div>
+    </div>
+          </div>
+        </div>
+      </main>
+      </div>
+        
+    </div>
+  </div>
+
+  <!-- Bootstrap JS -->
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+  <script>
+    const sidebar = document.getElementById('sidebar'); 
+    const toggleSidebarBtn = document.getElementById('toggleSidebar'); 
+    toggleSidebarBtn?.addEventListener('click', () => { sidebar.classList.toggle('d-none'); });
+
+    // Элемент логотипа
+    const sidebarLogo = document.getElementById('sidebarLogo');
+
+    // Theme toggle
+    const themeToggle = document.getElementById('themeToggle');
+    themeToggle.addEventListener('click', () => {
+      const html = document.documentElement;
+      const currentTheme = html.getAttribute('data-bs-theme');
+
+      if (currentTheme === 'light') {
+        html.setAttribute('data-bs-theme', 'dark');
+        themeToggle.innerHTML = '<i class="fa-regular fa-sun"></i>';
+        sidebarLogo.src = 'assets/img/logo_dark_w_text.png';
+      } else {
+        html.setAttribute('data-bs-theme', 'light');
+        themeToggle.innerHTML = '<i class="fa-regular fa-moon"></i>';
+        sidebarLogo.src = 'assets/img/logo_light_w_text.png';
+      }
+    });
+  </script>
+</body>
+</html>
