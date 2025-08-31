@@ -1,31 +1,133 @@
+/* -------------------
+   Sidebar (desktop)
+------------------- */
 .sidebar {
-    min-height: 100vh;
-    transition: all 0.3s;
+  min-height: 100vh;
+  transition: all 0.3s;
+}
+
+.app-sidebar {
+  width: 280px;
+  flex: 0 0 280px;
+  color: #fff;
+  order: 0;
+  transition: all 0.3s;
+  display:none;
 }
 
 .sidebar.collapsed {
-    width: 60px !important;
+  width: 60px !important;
 }
 
 .sidebar.collapsed .menu-text {
-    display: none;
-}
-
-.content {
-    padding: 20px;
+  display: none;
 }
 
 .sidebar-logo {
-    width: 100%;
-    height: auto;
+  width: 90%;
+  margin:15px;
+  height: auto;
 }
 
+.app-sidebar--visible {
+    display: block;
+  }
 .menu-text {
-    font-size: .75rem;
-    color: rgb(152 162 179);
+  font-size: 0.75rem;
+  color: rgb(152 162 179);
+}
+
+/* -------------------
+   Content (desktop)
+------------------- */
+.content {
+  padding: 20px;
 }
 
 main {
-    margin-left: 50px; 
-    margin-right: 50px;
+  margin-left: 50px;
+  margin-right: 50px;
+}
+
+.navigation-menu {
+  padding-left: 15px;
+}
+
+.menu-item {
+  transition: none !important;
+}
+
+/* -------------------
+   Mobile layout <768px
+------------------- */
+@media (max-width: 768px) {
+  /* Основная раскладка */
+  .app-layout {
+    flex-direction: column;
+  }
+
+  /* Sidebar */
+  .app-sidebar {
+    width: 100%;
+    flex: 0 0 auto;
+    order: 0;
+    display: none; /* скрыт по умолчанию */
+    position: relative;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+
+    /* центрируем меню */
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+
+  /* показываем только при видимости */
+  .app-sidebar--visible {
+    display: flex;
+  }
+
+  /* Меню внутри sidebar */
+  .app-sidebar > .nav {
+    display: block;
+    width: 100%;
+  }
+
+  .app-sidebar .nav .nav-item {
+    margin: 0.5rem 0;
+  }
+
+  .app-sidebar .nav .collapse .nav {
+    display: block;
+    text-align: center;
+    padding-left: 0;
+  }
+
+.sidebar-logo {
+  width:60%;
+  margin:auto;
+  height: auto;
+}
+
+  /* Основная часть */
+  .app-main {
+    order: 1;
+  }
+
+  /* Content padding уменьшаем */
+  main {
+    margin: 0;
+    padding: 0.5rem;
+  }
+
+  .navigation-menu {
+    padding-left: 0;
+  }
+
+  /* Header */
+  .top-bar-left,
+  .top-bar-right {
+    width: 100%;
+    margin-bottom: 8px;
+  }
 }

@@ -18,9 +18,6 @@ export const HeaderLeft: React.FC<HeaderLeftProps> = ({ toggleSidebar }) => {
         <FontAwesomeIcon icon={faAlignLeft} />
       </button>
 
-      {/* текст сразу за кнопкой */}
-      <span className="h5 mb-0 me-3">Верхнее меню</span>
-
       {/* поиск (можно скрывать на мобилках при желании через d-none d-md-block) */}
       <Input
         className="search-input"

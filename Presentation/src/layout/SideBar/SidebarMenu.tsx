@@ -4,7 +4,7 @@ import { menuCategories } from '../menuCategories';
 
 export const SidebarMenu: React.FC = () => {
   return (
-    <nav>
+    <nav className='navigation-menu'>
       {menuCategories.map(category => (
         <div key={category.title}>
           <h6 className="menu-text mb-3">{category.title}</h6>
