@@ -62,89 +62,8 @@ html, body, #root {
 }
 
 /* =======================================
-   Боковое меню / sidebar
-======================================= */
-.sidebar {
-    min-height: 100vh;
-    transition: all 0.3s;
-}
-
-.sidebar.collapsed {
-    width: 60px !important;
-}
-
-.sidebar.collapsed .menu-text {
-    display: none;
-}
-
-.content {
-    padding: 20px;
-}
-
-.sidebar-logo {
-    width: 100%;
-    height: auto;
-}
-
-/* =======================================
-   Профиль / аватар
-======================================= */
-.profilePhoto {
-    width: 40px;
-    height: 40px;
-}
-
-.profile-info {
-    color: rgb(52 64 84);
-}
-
-.profile-info small {
-    font-size: 12px;
-    color: rgb(102 112 133);
-}
-
-/* =======================================
-   Меню и подписи
-======================================= */
-.menu-text {
-    font-size: .75rem;
-    color: rgb(152 162 179);
-}
-
-/* =======================================
-   Dropdown / выпадающие меню
-======================================= */
-.dropdown-toggle-custom::after {
-    display: none;
-}
-
-.dropdown-icon {
-    transition: transform 0.3s;
-}
-
-.dropdown .dropdown-toggle-custom.show .dropdown-icon {
-    transform: rotate(180deg);
-}
-
-.dropdown-menu-wide {
-    min-width: 250px;
-    max-width: 350px;
-    border-radius: 5%;
-    color: rgb(52 64 84);
-}
-
-.dropdown-menu-wide .icon {
-    margin-right: 7px;
-}
-
-/* =======================================
    Содержимое страницы
 ======================================= */
-main {
-    margin-left: 50px; 
-    margin-right: 50px;
-}
-
  /* Стили для уведомлений */
     .notification-btn{
         position:relative;

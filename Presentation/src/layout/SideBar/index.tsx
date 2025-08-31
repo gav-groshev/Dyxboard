@@ -2,7 +2,7 @@ import React from "react";
 import { SidebarHeader } from "./SidebarHeader";
 import { SidebarMenu } from "./SidebarMenu";
 import { useTheme } from "../ThemeContext";
-
+import './Sidebar.css';
 interface SideBarProps {
   visible?: boolean;
 }

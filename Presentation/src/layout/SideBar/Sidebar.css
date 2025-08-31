@@ -1,0 +1,31 @@
+.sidebar {
+    min-height: 100vh;
+    transition: all 0.3s;
+}
+
+.sidebar.collapsed {
+    width: 60px !important;
+}
+
+.sidebar.collapsed .menu-text {
+    display: none;
+}
+
+.content {
+    padding: 20px;
+}
+
+.sidebar-logo {
+    width: 100%;
+    height: auto;
+}
+
+.menu-text {
+    font-size: .75rem;
+    color: rgb(152 162 179);
+}
+
+main {
+    margin-left: 50px; 
+    margin-right: 50px;
+}

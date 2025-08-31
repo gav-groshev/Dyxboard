@@ -2,6 +2,7 @@ import React from 'react';
 import { NotificationDropdown } from './NotificationDropdown';
 import { ProfileDropdown } from './ProfileDropdown';
 import { ThemeSwitcher } from '../../components/ThemeSwitcher/ThemeSwitcher';
+import './Header.css';
 
 interface HeaderRightProps {
   theme: 'light' | 'dark';
