@@ -344,3 +344,82 @@ main {
 .menu-item {
   transition: none !important;
 }
+
+/* контейнер приложения */
+.app-layout {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: row; /* desktop: sidebar слева */
+}
+
+/* Sidebar desktop */
+.app-sidebar {
+  width: 220px;
+  flex: 0 0 220px;
+  color: #fff;
+  order: 0;
+  transition: all 0.3s;
+}
+
+/* Основной блок */
+.app-main {
+  flex: 1;
+  order: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Мобильная версия */
+@media (max-width: 768px) {
+  .app-layout {
+    flex-direction: column; /* sidebar сверху */
+  }
+
+  .app-sidebar {
+    width: 100%;
+    flex: 0 0 auto;
+    order: 0;
+    display: none; /* скрыт по умолчанию */
+    position: relative; /* обязательно */
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  }
+
+  /* показываем только при visible */
+  .app-sidebar--visible {
+    display: block;
+  }
+
+  .app-main {
+    order: 1;
+  }
+}
+
+@media (max-width: 768px) {
+  /* родитель sidebar */
+  .app-sidebar {
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* вертикальное центрирование всего блока */
+    align-items: center;     /* горизонтальное центрирование родителя */
+    text-align: center;      /* чтобы текст внутри был по центру */
+  }
+
+  /* сами пункты меню */
+  .app-sidebar > .nav {
+    display: block; /* важное исправление! */
+    width: 100%;    /* можно растянуть до ширины sidebar */
+  }
+
+  .app-sidebar .nav .nav-item {
+    margin: 0.5rem 0;
+  }
+
+  /* вложенные списки (collapse) оставляем без flex */
+  .app-sidebar .nav .collapse .nav {
+    display: block;
+    text-align: center;
+    padding-left: 0; /* убираем отступы */
+  }
+}
+

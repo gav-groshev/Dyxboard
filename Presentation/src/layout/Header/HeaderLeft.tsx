@@ -10,11 +10,20 @@ interface HeaderLeftProps {
 export const HeaderLeft: React.FC<HeaderLeftProps> = ({ toggleSidebar }) => {
   return (
     <div className="d-flex align-items-center mb-2 mb-lg-0 top-bar-left">
-      <button onClick={toggleSidebar} className="btn btn-outline-secondary me-2 sidebar-toggle">
+      {/* кнопка-гамбургер */}
+      <button
+        onClick={toggleSidebar}
+        className="btn btn-outline-light me-2 sidebar-toggle"
+      >
         <FontAwesomeIcon icon={faAlignLeft} />
       </button>
+
+      {/* текст сразу за кнопкой */}
+      <span className="h5 mb-0 me-3">Верхнее меню</span>
+
+      {/* поиск (можно скрывать на мобилках при желании через d-none d-md-block) */}
       <Input
-        className='search-input'
+        className="search-input"
         placeholder="Search or type command..."
         icon={faMagnifyingGlass}
       />
