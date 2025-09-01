@@ -1,6 +1,4 @@
-import { faEye } from "@fortawesome/free-regular-svg-icons";
 import { Link } from "react-router-dom";
-import { ButtonPosition } from "../../shared/enums";
 import { Input } from "../../components/Inputs/Input";
 import { PasswordInput } from "../../components/Inputs/PasswordInput";
 
