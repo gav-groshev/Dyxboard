@@ -15,10 +15,10 @@ export const AppRoutes = () => (
 
     {/* Private (общий каркас) */}
     <Route element={<AppLayout />}>
-      <Route path="#/" element={<ProfilePage />} />
-      <Route path="#/profile" element={<ProfilePage />} />
-      <Route path="#/todo" element={<TaskList />} />
-      <Route path="#/kanban" element={<KanbanPage />} />
+      <Route path="" element={<ProfilePage />} />
+      <Route path="profile" element={<ProfilePage />} />
+      <Route path="todo" element={<TaskList />} />
+      <Route path="kanban" element={<KanbanPage />} />
     </Route>
 
     {/* опционально: редирект на / */}
