@@ -1,15 +1,10 @@
-# Простой workflow для деплоя статического сайта на GitHub Pages
-name: Deploy to GitHub Pages
+name: Deploy Vite React to GitHub Pages
 
 on:
-  # Запускает workflow при каждом пуше в ветку main
   push:
     branches: [ "main" ]
-
-  # Позволяет вручную запустить workflow из вкладки "Actions"
   workflow_dispatch:
 
-# Даем разрешение на запись в репозиторий (чтобы workflow мог закоммитить собранные файлы)
 permissions:
   contents: read
   pages: write
@@ -19,37 +14,36 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout code
+      - name: Checkout
         uses: actions/checkout@v4
-
-      - name: Setup Node.js
+        
+      - name: Setup Node
         uses: actions/setup-node@v4
         with:
           node-version: '20'
           cache: 'npm'
-
+          
       - name: Install dependencies
         run: npm ci
-
-      - name: Build with Vite
+        
+      - name: Build
         run: npm run build
-
+        
       - name: Setup Pages
         uses: actions/configure-pages@v3
-
+        
       - name: Upload artifact
-        uses: actions/upload-pages-artifact@v2
+        uses: actions/upload-pages-artifact@v3
         with:
-          # Путь к собранной версии проекта
+          # КРИТИЧЕСКИ ВАЖНО: путь к собранным файлам
           path: ./dist
 
   deploy:
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
-    needs: build
     runs-on: ubuntu-latest
-    name: Deploy
+    needs: build
     steps:
       - name: Deploy to GitHub Pages
         id: deployment

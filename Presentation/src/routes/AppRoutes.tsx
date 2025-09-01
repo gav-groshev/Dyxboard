@@ -10,15 +10,15 @@ import { SignInPage } from "../features/Auth/SignInPage";
 export const AppRoutes = () => (
   <Routes>
     {/* Public */}
-    <Route path="/login" element={<LoginPage />} />
-    <Route path="/signin" element={<SignInPage />} />
+    <Route path="./login" element={<LoginPage />} />
+    <Route path="./signin" element={<SignInPage />} />
 
     {/* Private (общий каркас) */}
     <Route element={<AppLayout />}>
-      <Route path="/" element={<ProfilePage />} />
-      <Route path="/profile" element={<ProfilePage />} />
-      <Route path="/todo" element={<TaskList />} />
-      <Route path="/kanban" element={<KanbanPage />} />
+      <Route path="./" element={<ProfilePage />} />
+      <Route path="./profile" element={<ProfilePage />} />
+      <Route path="./todo" element={<TaskList />} />
+      <Route path="./kanban" element={<KanbanPage />} />
     </Route>
 
     {/* опционально: редирект на / */}
