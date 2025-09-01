@@ -1,47 +1,64 @@
 import React from "react";
 import { Link, useLocation } from "react-router-dom";
-import { menuCategories, type MenuItem} from "../menuCategories";
+import { menuCategories, type MenuItem } from "../menuCategories";
 
 export const Breadcrumbs: React.FC = () => {
   const location = useLocation();
 
-  // Если главная страница — ничего не отображаем
   if (location.pathname === "/") return null;
 
-  // Функция находит MenuItem по пути
-  const findMenuItem = (path: string): MenuItem | undefined => {
+  // Функция находит путь до MenuItem по path
+  const findMenuPath = (path: string): MenuItem[] | null => {
+    const searchItems = (items: MenuItem[], parents: MenuItem[] = []): MenuItem[] | null => {
+      for (const item of items) {
+        if (item.href === path) {
+          return [...parents, item];
+        }
+        if (item.children) {
+          const found = searchItems(item.children, [...parents, item]);
+          if (found) return found;
+        }
+      }
+      return null;
+    };
+
     for (const category of menuCategories) {
-      const item = category.items.find(i => i.href === path);
-      if (item) return item;
+      const found = searchItems(category.items);
+      if (found) return found;
     }
-    return undefined;
+
+    return null;
   };
 
-  const currentItem = findMenuItem(location.pathname);
+  const menuPath = findMenuPath(location.pathname);
+  if (!menuPath) return null;
 
-  if (!currentItem) return null; // если не нашли — ничего не показываем
-
+  // Формируем breadcrumbs: Home + путь из menuPath
   const breadcrumbs = [
     { label: "Home", path: "/" },
-    { label: currentItem.label, path: location.pathname },
+    ...menuPath.map(item => ({ label: item.label, path: item.href || null })),
   ];
 
   return (
     <nav aria-label="breadcrumb">
       <ol className="breadcrumb mb-0">
-        {breadcrumbs.map((crumb, index) => {
-          const isLast = index === breadcrumbs.length - 1;
-          return (
-            <li
-              key={crumb.path}
-              className={`breadcrumb-item ${isLast ? "active" : ""}`}
-              aria-current={isLast ? "page" : undefined}
-            >
-              {isLast ? crumb.label : <Link to={crumb.path}>{crumb.label}</Link>}
-            </li>
-          );
-        })}
-      </ol>
+  {breadcrumbs.map((crumb, index) => {
+    const isLast = index === breadcrumbs.length - 1;
+    return (
+      <li
+        key={crumb.label}
+        className={`breadcrumb-item ${isLast ? "active" : ""}`}
+        aria-current={isLast ? "page" : undefined}
+      >
+        {crumb.path && !isLast ? (
+          <Link to={crumb.path}>{crumb.label}</Link>
+        ) : (
+          crumb.label
+        )}
+      </li>
+    );
+  })}
+</ol>
     </nav>
   );
 };

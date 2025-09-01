@@ -8,13 +8,27 @@ export const MainContent: React.FC = () => {
   const location = useLocation();
 
   // Находим текущий маршрут в меню
-  const findRouteByPath = (path: string): MenuItem | undefined => {
-    for (const category of menuCategories) {
-      const item = category.items.find(i => i.href === path);
-      if (item) return item;
+const findRouteByPath = (path: string): MenuItem | undefined => {
+  const searchItems = (items: MenuItem[]): MenuItem | undefined => {
+    for (const item of items) {
+      if (item.href === path) return item;
+      if (item.children) {
+        const found = searchItems(item.children);
+        if (found) return found;
+      }
     }
     return undefined;
   };
+
+  for (const category of menuCategories) {
+    const found = searchItems(category.items);
+    if (found) return found;
+  }
+
+  console.log(path);
+  return undefined;
+};
+
 
   const currentRoute = findRouteByPath(location.pathname);
 
