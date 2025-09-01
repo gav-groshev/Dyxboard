@@ -5,10 +5,10 @@ import user from "../../assets/images/owner.png";
 
 export const ProfileDropdown = () => {
   const trigger = (
-    <div className="d-flex align-items-center text-decoration-none dropdown-toggle-custom">
-      <img src={user} alt="Profile" className="rounded-circle me-2 profilePhoto" />
-      <span>A. Groshev</span>
-      <FontAwesomeIcon icon={faChevronDown} className="ms-2 dropdown-icon" />
+    <div className="d-flex align-items-center text-decoration-none dropdown-toggle-custom p-md-0">
+      <img src={user} alt="Profile" className="rounded-circle me-1 me-md-2 profilePhoto" />
+      <span className="d-none d-md-inline">A. Groshev</span>
+    <FontAwesomeIcon icon={faChevronDown} className="ms-2 dropdown-icon d-none d-md-inline" />
     </div>
   );
 
@@ -30,7 +30,7 @@ export const ProfileDropdown = () => {
     <DropdownMenu
       trigger={trigger}
       items={items}
-      rootClassName="dropdown"
+      rootClassName="dropdown profile-dropdown"
       menuClassName="dropdown-menu dropdown-menu-end dropdown-menu-wide"
     />
   );

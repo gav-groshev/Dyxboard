@@ -11,19 +11,15 @@ export const Header: React.FC<HeaderProps> = ({ toggleSidebar }) => {
   const { theme, toggleTheme } = useTheme();
 
   return (
-<header className="border-bottom bg-body w-100 px-3 py-2">
-  <div className="d-flex flex-column flex-md-row justify-content-center justify-content-md-between align-items-center">
-    {/* Левая часть */}
-    <div className="mb-2 mb-md-0">
+    <header className="border-bottom bg-body w-100 px-3 pt-2 pb-0 pb-md-2 ">
+  <div className="row align-items-center">
+    <div className="col-7 col-md-6 pt-2">
       <HeaderLeft toggleSidebar={toggleSidebar} />
     </div>
-
-    {/* Правая часть */}
-    <div>
+    <div className="col-5 col-md-6 d-flex justify-content-end">
       <HeaderRight theme={theme} toggleTheme={toggleTheme} />
     </div>
   </div>
 </header>
-
   );
 };

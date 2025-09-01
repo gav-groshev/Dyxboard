@@ -11,7 +11,8 @@ interface HeaderRightProps {
 
 export const HeaderRight: React.FC<HeaderRightProps> = ({ theme, toggleTheme }) => {
   return (
-    <div className="d-flex align-items-center top-bar-right info-panel">
+    <div className="d-flex align-items-center top-bar-right info-panel justify-content-end ">
+
       <ThemeSwitcher theme={theme} toggleTheme={toggleTheme} />
       <NotificationDropdown />
       <ProfileDropdown />

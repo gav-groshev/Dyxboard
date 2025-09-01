@@ -59,7 +59,7 @@ export const NotificationDropdown = () => {
     <DropdownMenu
       trigger={trigger}
       items={items}
-      buttonClassName="btn btn-circle btn-outline-secondary me-3 notification-panel notification-btn"
+      buttonClassName="btn btn-circle btn-outline-secondary me-1 me-md-3 notification-panel notification-btn"
       menuClassName="dropdown-menu dropdown-menu-end notification-dropdown"
     />
   );

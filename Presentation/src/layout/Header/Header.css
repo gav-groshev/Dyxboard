@@ -34,3 +34,45 @@
 .dropdown-menu-wide .icon {
     margin-right: 7px;
 }
+
+@media (max-width: 767.98px) {
+    .profilePhoto {
+        width: 30px;
+        height: 30px;
+    }
+    .btn-circle{
+        width: 30px;
+        height: 30px;
+    }
+
+    .top-bar-left {
+      width: 50%;
+    }
+
+    .sidebar-toggle{
+        width:30px;
+        height:30px;
+        font-size:10px;
+        padding:5px;
+    }
+
+    .search-input,
+    .search-input input,
+    .search-input button
+    {
+        height:30px;
+    }
+
+        .search-input input,
+    .search-input button{
+        padding:5px;
+        font-size:10px;
+    }
+
+    .profile-dropdown,
+    .profile-dropdown .dropdown-menu-custom{
+        padding:3px;
+    }
+
+}
+
