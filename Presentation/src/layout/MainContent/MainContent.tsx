@@ -35,7 +35,7 @@ const findRouteByPath = (path: string): MenuItem | undefined => {
 return (
   <>
     <div className="bg-light-subtle flex-grow-1 d-flex  overflow-auto main-scroll">
-      <main className="p-4 flex-grow-1 bg-light-subtle">
+      <main className="p-2 p-md-4 flex-grow-1 bg-light-subtle">
         {currentRoute && (
           <PageHeader title={currentRoute.label} />
         )}

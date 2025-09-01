@@ -1,10 +1,7 @@
-import { ThemeSwitcher } from "../../components/ThemeSwitcher/ThemeSwitcher";
-import { useTheme } from "../../layout/ThemeContext";
 import { AuthLeftPanel } from "./AuthLeftPanel";
 import { AuthRightPanel } from "./AuthRightPanel";
 
 export const SignInPage: React.FC = () => {
-  const { theme, toggleTheme } = useTheme();
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
@@ -13,19 +10,11 @@ export const SignInPage: React.FC = () => {
   };
 
   return (
-    <div className="container-fluid h-100 auth-page">
-      <div className="row h-100">
-        <AuthLeftPanel onSubmit={handleSubmit} />
-        <AuthRightPanel />
-      </div>
-
-      {/* Кнопка переключения темы */}
-      <ThemeSwitcher
-        theme={theme}
-        toggleTheme={toggleTheme}
-        isPrimary={true}
-        className="position-absolute"
-      />
-    </div>
+    <div className="container-fluid auth-page position-relative min-vh-100 d-flex flex-column">
+  <div className="row flex-grow-1 position-relative">
+    <AuthLeftPanel onSubmit={handleSubmit} />
+    <AuthRightPanel />
+  </div>
+</div>
   );
 };

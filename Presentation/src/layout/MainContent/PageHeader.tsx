@@ -7,7 +7,7 @@ interface PageHeaderProps {
 
 export const PageHeader: React.FC<PageHeaderProps> = ({ title }) => {
   return (
-    <div className="d-flex justify-content-between align-items-center mb-4">
+    <div className="d-flex justify-content-between align-items-center mb-2 mb-md-4">
       <h5 className="fw-bold">{title}</h5>
       <Breadcrumbs />
     </div>
