@@ -1,5 +1,5 @@
 // routes/AppRoutes.tsx
-import {  BrowserRouter as Routes, Route, Navigate } from "react-router-dom";
+import { Routes, Route, Navigate } from "react-router-dom";
 import { LoginPage } from "../features/Auth/LoginPage";
 import { ProfilePage } from "../features/Profile";
 import TaskList from "../features/TaskList";
