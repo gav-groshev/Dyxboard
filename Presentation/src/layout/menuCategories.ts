@@ -19,14 +19,14 @@ export const menuCategories: MenuCategory[] = [
   {
     title: 'MENU',
     items: [
-      { label: 'Main Page', href: './', icon: faHouse },
-      { label: 'Profile', href: './profile', icon: faUser },
+      { label: 'Main Page', href: '#/', icon: faHouse },
+      { label: 'Profile', href: '#/profile', icon: faUser },
       { 
         label: 'Planning', 
         icon: faBullseye ,
         children:[
-          { label: 'Task List', href: './todo', icon: faListCheck },
-          { label: 'Kanban', href: './kanban', icon: faScroll },
+          { label: 'Task List', href: '#/todo', icon: faListCheck },
+          { label: 'Kanban', href: '#/kanban', icon: faScroll },
         ]
       },
     ],
