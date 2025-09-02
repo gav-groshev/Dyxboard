@@ -7,9 +7,14 @@ import "./assets/css/theme.css";
 import "./assets/vendor/bootstrap/js/bootstrap.bundle.min.js";
 
 import { AppRoutes } from "./routes/AppRoutes";
+import { FaviconUpdater } from "./shared/hooks/useFavicon.js";
 
 function App() {
-  return <AppRoutes />;
+  return (
+    <>
+      <FaviconUpdater />
+      <AppRoutes />
+    </>);
 }
 
 export default App;
