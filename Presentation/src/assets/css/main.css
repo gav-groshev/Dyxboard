@@ -29,10 +29,7 @@ html, body, #root {
 .auth-page .theme-toggle{
   color:white;
 }
-.bg-side {
-  background-color: #0d1b61;
-  color: white;
-}
+
 /* =======================================
    Настройки текста
 ======================================= */

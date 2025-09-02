@@ -15,7 +15,7 @@ export const ThemeSwitcher: React.FC<ThemeSwitcherProps> = ({ theme, isPrimary =
   return (
     <button
       onClick={toggleTheme}
-      className={`btn ${btnClass} btn-outline-secondary me-1 me-md-3 ${className} theme-toggle`}
+      className={`btn theme-switcher ${btnClass} btn-outline-secondary me-1 me-md-3 ${className} theme-toggle`}
     >
       <FontAwesomeIcon icon={theme === "light" ? faMoon : faSun} />
     </button>

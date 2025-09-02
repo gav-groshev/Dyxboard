@@ -1,3 +1,39 @@
+.signin-description{
+  font-size: 12px;
+  color:gray;
+}
+
+[data-bs-theme="light"] .bg-side{
+  background-color: #6278e7;
+  color: white;
+}
+
+[data-bs-theme="dark"] .bg-side {
+  background-color: #0d1b61;
+  color: white;
+}
+
+[data-bs-theme="light"] .auth-btn{
+  color:#344054;;
+  border-color:rgb(222, 226, 230);
+}
+
+[data-bs-theme="dark"] .auth-btn{
+  color:#fff;
+}
+
+[data-bs-theme="light"] .auth-left-panel,
+[data-bs-theme="light"] .auth-header,
+[data-bs-theme="light"] .auth-page{
+  background-color: #efefef; 
+}
+
+[data-bs-theme="dark"] .auth-left-panel,
+[data-bs-theme="dark"] .auth-header,
+[data-bs-theme="dark"] .auth-page{
+  background-color: #1d2126; 
+}
+
 @media (max-width: 767.98px) {
   .theme-switcher {
     position: fixed;
