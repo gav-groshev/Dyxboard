@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Redirecting...</title>
+    <script>
+        // Редирект для SPA с BrowserRouter
+        const repositoryName = 'Dyxboard';
+        const currentPath = window.location.pathname;
+        
+        // Извлекаем путь после имени репозитория
+        if (currentPath.includes(repositoryName)) {
+            const appPath = currentPath.split(repositoryName + '/')[1] || '';
+            // Редирект на главную - BrowserRouter сам обработает маршрутизацию
+            window.location.href = `/${repositoryName}/${appPath}`;
+        } else {
+            // Редирект на главную репозитория
+            window.location.href = `/${repositoryName}/`;
+        }
+    </script>
+</head>
+<body>
+    Redirecting to application...
+    <noscript>
+        <meta http-equiv="refresh" content="0; URL=/Dyxboard/">
+        <p>Please <a href="/Dyxboard/">click here</a> if you are not redirected.</p>
+    </noscript>
+</body>
+</html>
