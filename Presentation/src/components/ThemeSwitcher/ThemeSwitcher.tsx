@@ -1,15 +1,15 @@
 import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faMoon, faSun } from "@fortawesome/free-regular-svg-icons";
+import { useTheme } from "../../layout/ThemeContext";
 
 interface ThemeSwitcherProps {
-  theme: "light" | "dark";
   isPrimary?: boolean;
   className? : string;
-  toggleTheme: () => void;
 }
 
-export const ThemeSwitcher: React.FC<ThemeSwitcherProps> = ({ theme, isPrimary = false, className, toggleTheme}) => {
+export const ThemeSwitcher: React.FC<ThemeSwitcherProps> = ({ isPrimary = false, className}) => {
+    const { theme, toggleTheme } = useTheme();
   
   const btnClass = isPrimary? 'btn-primary' : 'btn-circle';
   return (

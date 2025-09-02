@@ -1,14 +1,12 @@
 import React from 'react';
 import { HeaderLeft } from './HeaderLeft';
 import { HeaderRight } from './HeaderRight';
-import { useTheme } from '../ThemeContext';
 
 interface HeaderProps {
   toggleSidebar: () => void;
 }
 
 export const Header: React.FC<HeaderProps> = ({ toggleSidebar }) => {
-  const { theme, toggleTheme } = useTheme();
 
   return (
     <header className="border-bottom bg-body w-100 px-3 pt-2 pb-0 pb-md-2 ">
@@ -17,7 +15,7 @@ export const Header: React.FC<HeaderProps> = ({ toggleSidebar }) => {
       <HeaderLeft toggleSidebar={toggleSidebar} />
     </div>
     <div className="col-5 col-md-6 d-flex justify-content-end">
-      <HeaderRight theme={theme} toggleTheme={toggleTheme} />
+      <HeaderRight />
     </div>
   </div>
 </header>

@@ -2,10 +2,8 @@ import { Link } from "react-router-dom";
 import { SignInForm } from "./SignInForm";
 import { SocialSignInButtons } from "./SocialSignInButtons";
 import { ThemeSwitcher } from "../../components/ThemeSwitcher/ThemeSwitcher";
-import { useTheme } from "../../layout/ThemeContext";
 
 export const AuthLeftPanel: React.FC<{ onSubmit: (e: React.FormEvent) => void }> = ({ onSubmit }) => {
-  const { theme, toggleTheme } = useTheme();
 
   return (
     <div className="auth-left-panel col-lg-6 d-flex flex-column justify-content-center align-items-center p-md-5 p-4">
@@ -19,7 +17,7 @@ export const AuthLeftPanel: React.FC<{ onSubmit: (e: React.FormEvent) => void }>
         
           <div className="d-flex justify-content-between align-items-center">
             <h2 className="fw-bold m-0">Sign In</h2>
-            <ThemeSwitcher theme={theme} toggleTheme={toggleTheme} isPrimary={false} />
+            <ThemeSwitcher isPrimary={false} />
           </div>
         
 
