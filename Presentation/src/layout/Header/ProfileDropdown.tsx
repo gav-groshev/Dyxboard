@@ -2,6 +2,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faUser, faGear, faCircleInfo, faArrowRightFromBracket, faChevronDown } from "@fortawesome/free-solid-svg-icons";
 import { DropdownMenu } from "../../components/DropdownMenu/DropdownMenu";
 import user from "../../assets/images/owner.png";
+import { Link } from "react-router-dom";
 
 export const ProfileDropdown = () => {
   const trigger = (
@@ -22,7 +23,11 @@ export const ProfileDropdown = () => {
       <li><a className="dropdown-item" href="#"><FontAwesomeIcon icon={faGear} /> Account settings</a></li>
       <li><a className="dropdown-item" href="#"><FontAwesomeIcon icon={faCircleInfo} /> Support</a></li>
       <li><hr className="dropdown-divider" /></li>
-      <li><a className="dropdown-item" href="/signin"><FontAwesomeIcon icon={faArrowRightFromBracket} /> Sign out</a></li>
+      <li>
+        <Link className="dropdown-item" to="/signin">
+          <FontAwesomeIcon icon={faArrowRightFromBracket} /> Sign out
+        </Link>
+      </li>
     </>
   );
 
