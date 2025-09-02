@@ -10,8 +10,8 @@ import { SignInPage } from "../features/Auth/SignInPage";
 export const AppRoutes = () => (
   <Routes>
     {/* Public */}
-    <Route path="#/login" element={<LoginPage />} />
-    <Route path="#/signin" element={<SignInPage />} />
+    <Route path="login" element={<LoginPage />} />
+    <Route path="signin" element={<SignInPage />} />
 
     {/* Private (общий каркас) */}
     <Route element={<AppLayout />}>
