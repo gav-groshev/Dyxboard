@@ -26,7 +26,7 @@ declare module 'react-grid-layout' {
     isDraggable?: boolean;
     isResizable?: boolean;
     children?: React.ReactNode;
-    resizeHandle?: ReactElement<any> | ((resizeHandleAxis: ResizeHandleAxis) => ReactElement<any>)
+    resizeHandle?: ReactElement<HTMLSpanElement>;
   }
 
   export class Responsive extends React.Component<ResponsiveProps> {}

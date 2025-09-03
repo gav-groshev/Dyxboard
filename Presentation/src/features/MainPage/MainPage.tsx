@@ -5,8 +5,6 @@ import "react-resizable/css/styles.css";
 import { Responsive, type Layout, type ResponsiveProps } from "react-grid-layout";
 import './MainPage.css';
 import { ImageCard } from "../../components/Cards/ImageCard";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faCircle } from "@fortawesome/free-solid-svg-icons";
 
 interface MyResponsiveProps extends ResponsiveProps {
   compactType?: "vertical" | "horizontal" | null;
