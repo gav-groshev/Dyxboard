@@ -1,0 +1,51 @@
+/* src/styles/cards.css */
+
+/* Один базовый ряд — можно менять под ваш дизайн */
+:root {
+  --card-row-height: 100px; /* 1 единица высоты = 100px (регулируйте) */
+}
+
+/* Высотные классы: min-height, чтобы контент мог расширяться по необходимости */
+.card-h-1 { min-height: calc(var(--card-row-height) * 1); }
+.card-h-2 { min-height: calc(var(--card-row-height) * 2); }
+.card-h-3 { min-height: calc(var(--card-row-height) * 3); }
+.card-h-4 { min-height: calc(var(--card-row-height) * 4); }
+.card-h-5 { min-height: calc(var(--card-row-height) * 5); }
+.card-h-6 { min-height: calc(var(--card-row-height) * 6); }
+.card-h-7 { min-height: calc(var(--card-row-height) * 7); }
+.card-h-8 { min-height: calc(var(--card-row-height) * 8); }
+
+/* Если хотите жесткую высоту (фиксированную), раскомментируйте: */
+/* .card-h-1 { height: calc(var(--card-row-height) * 1); } */
+
+/* Чтобы карточка внутри колонки корректно растягивалась по высоте */
+.card.h-100 {
+  height: 100%;
+}
+
+/* Удобный утилитарный класс для картинок */
+.object-fit-cover {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+}
+
+/* Гарантируем, что колонка с картинкой растягивает изображение ровно под высоту карточки */
+.col-img-stretch {
+  padding: 0; /* убрать отступы, если нужно */
+}
+.col-img-stretch > img,
+.col-img-stretch > .object-fit-cover {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* Адаптивность: при мобильных устройствах уменьшаем "ряд" (если нужно) */
+@media (max-width: 767.98px) {
+  :root {
+    --card-row-height: 80px; /* на мобильных менее высокая единица */
+  }
+}

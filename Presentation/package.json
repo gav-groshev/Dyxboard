@@ -11,7 +11,6 @@
     "predeploy": "npm run build",
     "deploy": "gh-pages -d dist",
     "lint": "eslint ."
-    
   },
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^7.0.0",
@@ -21,8 +20,13 @@
     "@fortawesome/react-fontawesome": "^0.2.5",
     "@hello-pangea/dnd": "^18.0.1",
     "gh-pages": "^6.3.0",
+    "muuri": "^0.9.5",
     "react": "^19.1.1",
     "react-dom": "^19.1.1",
+    "react-draggable": "^4.5.0",
+    "react-grid-layout": "^1.5.2",
+    "react-muuri": "^0.3.0",
+    "react-resizable": "^3.0.5",
     "react-router-dom": "^7.8.1"
   },
   "devDependencies": {

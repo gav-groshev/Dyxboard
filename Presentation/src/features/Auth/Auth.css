@@ -36,7 +36,6 @@
 
 @media (max-width: 767.98px) {
   .theme-switcher {
-    position: fixed;
     bottom: 1rem;
     right: 1rem;
   }

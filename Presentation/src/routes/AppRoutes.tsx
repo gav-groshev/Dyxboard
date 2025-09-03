@@ -6,6 +6,7 @@ import TaskList from "../features/TaskList";
 import { KanbanPage } from "../features/Kanban";
 import { AppLayout } from "../layout/AppLayout";
 import { SignInPage } from "../features/Auth/SignInPage";
+import { MainPage } from "../features/MainPage/MainPage";
 
 export const AppRoutes = () => (
   <Routes>
@@ -15,7 +16,7 @@ export const AppRoutes = () => (
 
     {/* Private (общий каркас) */}
     <Route element={<AppLayout />}>
-      <Route path="" element={<ProfilePage />} />
+      <Route path="" element={<MainPage />} />
       <Route path="profile" element={<ProfilePage />} />
       <Route path="todo" element={<TaskList />} />
       <Route path="kanban" element={<KanbanPage />} />
