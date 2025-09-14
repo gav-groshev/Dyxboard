@@ -21,7 +21,6 @@ interface AppButtonProps {
   toggle?: boolean;                // Тоггл-эффект
   children?: React.ReactNode;
 }
-
 export const AppButton: React.FC<AppButtonProps> = ({
   onClick,
   className,
@@ -34,12 +33,12 @@ export const AppButton: React.FC<AppButtonProps> = ({
 }) => {
   const [toggled, setToggled] = useState(false);
 
-const handleClick = (event: React.MouseEvent<HTMLButtonElement>) => {
-  if (toggle) {
-    setToggled((prev) => !prev);
-  }
-  onClick?.(event); // передаем event дальше
-};
+  const handleClick = (event: React.MouseEvent<HTMLButtonElement>) => {
+    if (toggle) {
+      setToggled((prev) => !prev);
+    }
+    onClick?.(event);
+  };
 
   const radiusClass = {
     [ButtonRadius.None]: "",
@@ -47,24 +46,33 @@ const handleClick = (event: React.MouseEvent<HTMLButtonElement>) => {
     [ButtonRadius.Circle]: "rounded-circle",
   }[radius];
 
-  return (
-     <div className="dxb-btn-wrapper position-relative">
-      {children && <div className="dxb-btn-children position-absolute translate-middle">{children}</div>}
-
-      <button
-        onClick={handleClick}
-        className={clsx(
-          "btn btn-outline-light dxb-btn",
-          radiusClass,
-          toggled && "active",
-          className
-        )}
-        title={hoverText}
-      >
-        {icon && <FontAwesomeIcon icon={icon} className={text ? "me-2" : ""} />}
-        {text}
-      </button>
-     </div>
-   
+  const button = (
+    <button
+      onClick={handleClick}
+      className={clsx(
+        "btn btn-outline-light dxb-btn",
+        radiusClass,
+        toggled && "active",
+        className
+      )}
+      title={hoverText}
+    >
+      {icon && <FontAwesomeIcon icon={icon} className={text ? "me-2" : ""} />}
+      {text}
+    </button>
   );
+
+  if (children) {
+    return (
+      <div className="dxb-btn-wrapper position-relative">
+        <div className="dxb-btn-children position-absolute translate-middle">
+          {children}
+        </div>
+        {button}
+      </div>
+    );
+  }
+
+  return button;
 };
+
