@@ -17,7 +17,7 @@ export const AuthLeftPanel: React.FC<{ onSubmit: (e: React.FormEvent) => void }>
         
           <div className="d-flex justify-content-between align-items-center">
             <h2 className="fw-bold m-0">Sign In</h2>
-            <ThemeSwitcher isPrimary={false} />
+            <ThemeSwitcher />
           </div>
         
 
