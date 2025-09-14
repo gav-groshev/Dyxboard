@@ -34,9 +34,3 @@
   background-color: #1d2126; 
 }
 
-@media (max-width: 767.98px) {
-  .theme-switcher {
-    bottom: 1rem;
-    right: 1rem;
-  }
-}

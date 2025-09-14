@@ -35,6 +35,12 @@
     margin-right: 7px;
 }
 
+.notification-counter{
+    position:absolute;
+    top:5px;
+    left:35px;
+}
+
 @media (max-width: 767.98px) {
     .profilePhoto {
         width: 30px;

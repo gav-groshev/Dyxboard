@@ -1,6 +1,6 @@
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faBell } from "@fortawesome/free-regular-svg-icons";
+import { faBell} from "@fortawesome/free-regular-svg-icons";
 import { DropdownMenu } from "../../components/DropdownMenu/DropdownMenu";
+import { AppButton, ButtonRadius } from "../../components/Buttons/AppButton/AppButton";
 
 const notifications = [
   {
@@ -22,10 +22,15 @@ const notifications = [
 ];
 
 export const NotificationDropdown = () => {
+  /*TODO: подумать над необходимостью trigger */
   const trigger = (
     <>
-      <FontAwesomeIcon icon={faBell} />
-      <span className="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger notification-counter">
+      <AppButton
+        className={`me-1 me-md-3 btn-circle`}
+        radius={ButtonRadius.Circle}
+        icon={faBell}
+      />
+      <span className="position-absolute translate-middle badge rounded-pill bg-danger notification-counter">
         {notifications.length}
       </span>
     </>
@@ -59,7 +64,7 @@ export const NotificationDropdown = () => {
     <DropdownMenu
       trigger={trigger}
       items={items}
-      buttonClassName="btn btn-circle btn-outline-secondary me-1 me-md-3 notification-panel notification-btn"
+      buttonClassName=""
       menuClassName="dropdown-menu dropdown-menu-end notification-dropdown"
     />
   );

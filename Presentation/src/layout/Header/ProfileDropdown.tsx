@@ -6,11 +6,15 @@ import { Link } from "react-router-dom";
 
 export const ProfileDropdown = () => {
   const trigger = (
-    <div className="d-flex align-items-center text-decoration-none dropdown-toggle-custom p-md-0">
+    <>
+
+          <div className="d-flex align-items-center text-decoration-none dropdown-toggle-custom p-md-0">
       <img src={user} alt="Profile" className="rounded-circle me-1 me-md-2 profilePhoto" />
       <span className="d-none d-md-inline">A. Groshev</span>
     <FontAwesomeIcon icon={faChevronDown} className="ms-2 dropdown-icon d-none d-md-inline" />
     </div>
+    </>
+    
   );
 
   const items = (

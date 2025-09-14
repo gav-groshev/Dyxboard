@@ -1,7 +1,7 @@
 import React from 'react';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faAlignLeft, faMagnifyingGlass } from '@fortawesome/free-solid-svg-icons';
 import { Input } from '../../components/Inputs/Input';
+import { AppButton, ButtonRadius } from '../../components/Buttons/AppButton/AppButton';
 
 interface HeaderLeftProps {
   toggleSidebar: () => void;
@@ -10,13 +10,13 @@ interface HeaderLeftProps {
 export const HeaderLeft: React.FC<HeaderLeftProps> = ({ toggleSidebar }) => {
   return (
     <div className="d-flex align-items-center mb-2 mb-lg-0 top-bar-left ">
-      {/* кнопка-гамбургер */}
-      <button
+      <AppButton
         onClick={toggleSidebar}
-        className="btn btn-outline-light me-2 sidebar-toggle"
-      >
-        <FontAwesomeIcon icon={faAlignLeft} />
-      </button>
+        className="me-2 sidebar-toggle"
+        radius={ButtonRadius.Slightly}
+        icon={faAlignLeft}
+        hoverText="Открыть/закрыть меню"
+      />
 
       {/* поиск (можно скрывать на мобилках при желании через d-none d-md-block) */}
       <Input

@@ -17,16 +17,7 @@ body {
  body, html {
       height: 100%;
     }
-    .theme-toggle {
-      bottom: 20px;
-      right: 20px;
-      border-radius: 50%;
-      width: 50px;
-      height: 50px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
+
     .bg-side {
       background-color: #0d1b61;
       color: white;
@@ -43,15 +34,6 @@ body {
 /* =======================================
    Кнопки
 ======================================= */
-.btn-circle {
-    width: 40px;
-    height: 40px;
-    padding: 0;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
 
 .dropdown-toggle:focus {
     outline: none;
@@ -174,11 +156,6 @@ main {
       position: relative;
     }
 
-    .notification-counter{
-        position:absolute;
-        top:0;
-        left:20px;
-    }
     .status-dot {
       position: absolute;
       bottom: 30px;

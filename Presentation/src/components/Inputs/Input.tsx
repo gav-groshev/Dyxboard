@@ -1,8 +1,8 @@
 import React from "react";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import type { IconDefinition } from "@fortawesome/fontawesome-common-types";
 import "./Inputs.css";
 import { ButtonPosition } from "../../shared/enums";
+import { AppButton, ButtonRadius } from "../Buttons/AppButton/AppButton";
 
 export interface InputProps extends React.InputHTMLAttributes<HTMLInputElement> {
   icon?: IconDefinition | React.ReactNode; // FontAwesome или любой JSX
@@ -22,17 +22,12 @@ export const Input: React.FC<InputProps> = ({
     if (!icon) return null;
 
     return (
-      <button
-        className="btn btn-outline-secondary"
-        type="button"
-        onClick={onIconClick}
-      >
-        {typeof icon === "object" && "icon" in icon ? (
-          <FontAwesomeIcon icon={icon as IconDefinition} />
-        ) : (
-          icon
-        )}
-      </button>
+      <AppButton
+              onClick={onIconClick}
+              className="search-btn"
+              radius={ButtonRadius.None}
+              icon={icon as IconDefinition}
+            />
     );
   };
 
