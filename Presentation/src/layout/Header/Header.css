@@ -52,6 +52,7 @@
 
 .dxb-profile-menu-toggle{
     cursor: pointer;
+    user-select: none;
 }
 @media (max-width: 767.98px) {
     .profilePhoto {

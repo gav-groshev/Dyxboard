@@ -1,5 +1,5 @@
 import { faBell } from "@fortawesome/free-regular-svg-icons";
-import { useState } from "react";
+import { useState, useRef, useEffect } from "react";
 import { NotificationItem } from "./NotificationItem";
 import { AppButton, ButtonRadius } from "../../components/Buttons/AppButton/AppButton";
 import { DropdownMenu } from "../../components/DropdownMenu/DropdownMenu";
@@ -7,14 +7,29 @@ import { notifications } from "../../shared/data/notificationsDropdown";
 
 export const NotificationDropdownToggle = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const wrapperRef = useRef<HTMLDivElement>(null);
+
+  // Закрываем меню при клике вне компонента
+  useEffect(() => {
+    const handleClickOutside = (event: MouseEvent) => {
+      if (wrapperRef.current && !wrapperRef.current.contains(event.target as Node)) {
+        setIsOpen(false);
+      }
+    };
+
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, []);
 
   return (
-    <div className="notification-dropdown-wrapper position-relative">
+    <div className="notification-dropdown-wrapper position-relative" ref={wrapperRef}>
       <AppButton
         className="me-1 me-md-3 btn-circle"
         radius={ButtonRadius.Circle}
         icon={faBell}
-        onClick={() => setIsOpen(prev => !prev)} // toggle меню без конфликта
+        onClick={() => setIsOpen(prev => !prev)} // toggle меню
       />
 
       <span className="position-absolute translate-middle badge rounded-pill bg-danger notification-counter">
