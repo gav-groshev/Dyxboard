@@ -1,8 +1,8 @@
-import React from "react";
-import type { IconDefinition } from "@fortawesome/fontawesome-common-types";
-import "./Inputs.css";
-import { ButtonPosition } from "../../shared/enums";
-import { AppButton, ButtonRadius } from "../Buttons/AppButton/AppButton";
+import React from 'react';
+import type { IconDefinition } from '@fortawesome/fontawesome-common-types';
+import './Inputs.css';
+import { ButtonPosition } from '../../shared/enums';
+import { AppButton, ButtonRadius } from '../Buttons/AppButton/AppButton';
 
 export interface InputProps extends React.InputHTMLAttributes<HTMLInputElement> {
   icon?: IconDefinition | React.ReactNode; // FontAwesome или любой JSX
@@ -14,7 +14,7 @@ export interface InputProps extends React.InputHTMLAttributes<HTMLInputElement> 
 export const Input: React.FC<InputProps> = ({
   icon,
   buttonPosition = ButtonPosition.LEFT,
-  className = "",
+  className = '',
   onIconClick,
   ...rest
 }) => {
@@ -23,11 +23,11 @@ export const Input: React.FC<InputProps> = ({
 
     return (
       <AppButton
-              onClick={onIconClick}
-              className="search-btn"
-              radius={ButtonRadius.None}
-              icon={icon as IconDefinition}
-            />
+        onClick={onIconClick}
+        className="search-btn"
+        radius={ButtonRadius.None}
+        icon={icon as IconDefinition}
+      />
     );
   };
 

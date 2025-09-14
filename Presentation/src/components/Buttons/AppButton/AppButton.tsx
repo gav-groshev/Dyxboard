@@ -1,24 +1,24 @@
-import React, { useState } from "react";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import type { IconDefinition } from "@fortawesome/free-solid-svg-icons";
-import clsx from "clsx";
+import React, { useState } from 'react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import type { IconDefinition } from '@fortawesome/free-solid-svg-icons';
+import clsx from 'clsx';
 import './AppButton.css';
 
 // eslint-disable-next-line react-refresh/only-export-components
 export enum ButtonRadius {
-  None = "none",
-  Slightly = "slightly",
-  Circle = "circle",
+  None = 'none',
+  Slightly = 'slightly',
+  Circle = 'circle',
 }
 
 interface AppButtonProps {
   onClick?: (event: React.MouseEvent<HTMLButtonElement, MouseEvent>) => void;
-  className?: string;              // Дополнительные классы
-  radius?: ButtonRadius;           // Скругление
-  icon?: IconDefinition;           // FA иконка
-  text?: string;                   // Текст (опционально)
-  hoverText?: string;              // Подсказка при наведении
-  toggle?: boolean;                // Тоггл-эффект
+  className?: string; // Дополнительные классы
+  radius?: ButtonRadius; // Скругление
+  icon?: IconDefinition; // FA иконка
+  text?: string; // Текст (опционально)
+  hoverText?: string; // Подсказка при наведении
+  toggle?: boolean; // Тоггл-эффект
   children?: React.ReactNode;
 }
 export const AppButton: React.FC<AppButtonProps> = ({
@@ -29,7 +29,7 @@ export const AppButton: React.FC<AppButtonProps> = ({
   text,
   hoverText,
   toggle = false,
-  children
+  children,
 }) => {
   const [toggled, setToggled] = useState(false);
 
@@ -41,23 +41,18 @@ export const AppButton: React.FC<AppButtonProps> = ({
   };
 
   const radiusClass = {
-    [ButtonRadius.None]: "",
-    [ButtonRadius.Slightly]: "rounded",
-    [ButtonRadius.Circle]: "rounded-circle",
+    [ButtonRadius.None]: '',
+    [ButtonRadius.Slightly]: 'rounded',
+    [ButtonRadius.Circle]: 'rounded-circle',
   }[radius];
 
   const button = (
     <button
       onClick={handleClick}
-      className={clsx(
-        "btn btn-outline-light dxb-btn",
-        radiusClass,
-        toggled && "active",
-        className
-      )}
+      className={clsx('btn btn-outline-light dxb-btn', radiusClass, toggled && 'active', className)}
       title={hoverText}
     >
-      {icon && <FontAwesomeIcon icon={icon} className={text ? "me-2" : ""} />}
+      {icon && <FontAwesomeIcon icon={icon} className={text ? 'me-2' : ''} />}
       {text}
     </button>
   );
@@ -65,9 +60,7 @@ export const AppButton: React.FC<AppButtonProps> = ({
   if (children) {
     return (
       <div className="dxb-btn-wrapper position-relative">
-        <div className="dxb-btn-children position-absolute translate-middle">
-          {children}
-        </div>
+        <div className="dxb-btn-children position-absolute translate-middle">{children}</div>
         {button}
       </div>
     );
@@ -75,4 +68,3 @@ export const AppButton: React.FC<AppButtonProps> = ({
 
   return button;
 };
-

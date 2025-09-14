@@ -33,21 +33,21 @@ declare module 'react-grid-layout' {
 
   export class Responsive extends React.Component<ResponsiveProps> {}
 
-export const WidthProvider: <P = object>(
-  component: React.ComponentType<P>
-) => React.ComponentType<P>;
+  export const WidthProvider: <P = object>(
+    component: React.ComponentType<P>,
+  ) => React.ComponentType<P>;
 
-export const GridLayout: React.ComponentType<{
-  layout?: Layout[];
-  cols?: number;
-  rowHeight?: number;
-  width?: number;
-  isResizable?: boolean;
-  isDraggable?: boolean;
-  verticalCompact?: boolean;
-  children?: React.ReactNode;
-  onLayoutChange?: (layout: Layout[]) => void; // <-- добавляем
-}>;
+  export const GridLayout: React.ComponentType<{
+    layout?: Layout[];
+    cols?: number;
+    rowHeight?: number;
+    width?: number;
+    isResizable?: boolean;
+    isDraggable?: boolean;
+    verticalCompact?: boolean;
+    children?: React.ReactNode;
+    onLayoutChange?: (layout: Layout[]) => void; // <-- добавляем
+  }>;
 
   export default GridLayout;
 }

@@ -1,6 +1,6 @@
-import React from "react";
-import { Droppable, Draggable } from "@hello-pangea/dnd";
-import { KanbanTask } from "./KanbanTask";
+import React from 'react';
+import { Droppable, Draggable } from '@hello-pangea/dnd';
+import { KanbanTask } from './KanbanTask';
 
 interface ColumnProps {
   columnId: string;
@@ -22,7 +22,7 @@ export const KanbanColumn: React.FC<ColumnProps> = ({ columnId, title, tasks, ta
   return (
     <div className="col-md-4 kanban-column">
       <h6 className="mb-3 d-flex align-items-center">
-        {title} 
+        {title}
         <span className={`badge ${tagClass} ms-2`}>{tasks.length}</span>
       </h6>
 

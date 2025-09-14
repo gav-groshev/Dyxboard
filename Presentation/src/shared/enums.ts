@@ -1,4 +1,4 @@
 export enum ButtonPosition {
-  LEFT = "left",
-  RIGHT = "right",
+  LEFT = 'left',
+  RIGHT = 'right',
 }

@@ -1,7 +1,7 @@
-import React, { useState, useEffect } from "react";
-import { Header } from "./Header";
-import { SideBar } from "./SideBar";
-import { MainContent } from "./MainContent/MainContent";
+import React, { useState, useEffect } from 'react';
+import { Header } from './Header';
+import { SideBar } from './SideBar';
+import { MainContent } from './MainContent/MainContent';
 
 export const AppLayout: React.FC = () => {
   const [isSidebarVisible, setSidebarVisible] = useState(true);
@@ -18,8 +18,8 @@ export const AppLayout: React.FC = () => {
       if (!mobile) setSidebarVisible(true);
     };
 
-    window.addEventListener("resize", handleResize);
-    return () => window.removeEventListener("resize", handleResize);
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
   }, []);
 
   return (

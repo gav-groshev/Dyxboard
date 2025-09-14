@@ -1,8 +1,8 @@
-import React, { useState } from "react";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import type { IconDefinition } from "@fortawesome/fontawesome-common-types";
-import { NavLink } from "react-router-dom";
-import { faChevronDown, faChevronRight } from "@fortawesome/free-solid-svg-icons";
+import React, { useState } from 'react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import type { IconDefinition } from '@fortawesome/fontawesome-common-types';
+import { NavLink } from 'react-router-dom';
+import { faChevronDown, faChevronRight } from '@fortawesome/free-solid-svg-icons';
 
 interface SidebarMenuItemProps {
   label: string;
@@ -37,16 +37,11 @@ export const SidebarMenuItem: React.FC<SidebarMenuItemProps> = ({
           </button>
 
           {/* Вложенные ссылки с Bootstrap анимацией */}
-          <ul className={`nav flex-column ms-4 collapse ${open ? "show" : ""}`}>
+          <ul className={`nav flex-column ms-4 collapse ${open ? 'show' : ''}`}>
             {children!.map((child) => (
               <li key={child.label} className="nav-item mb-1">
-                <NavLink
-                  to={child.href!}
-                  className="nav-link d-flex align-items-center menu-item"
-                >
-                  {child.icon && (
-                    <FontAwesomeIcon icon={child.icon} className="me-2" />
-                  )}
+                <NavLink to={child.href!} className="nav-link d-flex align-items-center menu-item">
+                  {child.icon && <FontAwesomeIcon icon={child.icon} className="me-2" />}
                   <span>{child.label}</span>
                 </NavLink>
               </li>

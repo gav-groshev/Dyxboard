@@ -1,6 +1,6 @@
-import { Link } from "react-router-dom";
-import { Input } from "../../components/Inputs/Input";
-import { PasswordInput } from "../../components/Inputs/PasswordInput";
+import { Link } from 'react-router-dom';
+import { Input } from '../../components/Inputs/Input';
+import { PasswordInput } from '../../components/Inputs/PasswordInput';
 
 export const SignInForm: React.FC<{ onSubmit: (e: React.FormEvent) => void }> = ({ onSubmit }) => (
   <form onSubmit={onSubmit}>
@@ -8,21 +8,14 @@ export const SignInForm: React.FC<{ onSubmit: (e: React.FormEvent) => void }> = 
       <label className="form-label">
         Email <span className="text-danger">*</span>
       </label>
-      <Input
-        type="email"
-        placeholder="info@gmail.com"
-        required
-      />
+      <Input type="email" placeholder="info@gmail.com" required />
     </div>
 
     <div className="mb-3">
       <label className="form-label">
         Password <span className="text-danger">*</span>
       </label>
-      <PasswordInput
-        placeholder="Enter your password"
-        className="mb-3"
-      />
+      <PasswordInput placeholder="Enter your password" className="mb-3" />
     </div>
 
     <div className="d-flex justify-content-between align-items-center mb-3">

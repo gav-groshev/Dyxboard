@@ -10,12 +10,8 @@ interface SidebarHeaderProps {
 export const SidebarHeader: React.FC<SidebarHeaderProps> = ({ theme }) => {
   return (
     <header className="d-flex align-items-center sidebar-logo">
-      <Link to={'/'} >
-        <img
-          src={theme === 'light' ? logoLight : logoDark}
-          className="sidebar-logo"
-          alt="Logo"
-        />
+      <Link to={'/'}>
+        <img src={theme === 'light' ? logoLight : logoDark} className="sidebar-logo" alt="Logo" />
       </Link>
     </header>
   );

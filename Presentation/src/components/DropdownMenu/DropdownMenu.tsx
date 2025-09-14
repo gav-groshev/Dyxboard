@@ -1,5 +1,5 @@
-import React from "react";
-import "./DropdownMenu.css";
+import React from 'react';
+import './DropdownMenu.css';
 
 interface DropdownMenuProps {
   isOpen: boolean;
@@ -7,18 +7,11 @@ interface DropdownMenuProps {
   className?: string;
 }
 
-export const DropdownMenu: React.FC<DropdownMenuProps> = ({
-  isOpen,
-  children,
-  className = "",
-}) => {
+export const DropdownMenu: React.FC<DropdownMenuProps> = ({ isOpen, children, className = '' }) => {
   if (!isOpen) return null;
 
   return (
-    <ul
-      className={`dropdown-menu ${className} show`}
-      style={{ position: "absolute", right: 0 }} 
-    >
+    <ul className={`dropdown-menu ${className} show`} style={{ position: 'absolute', right: 0 }}>
       {children}
     </ul>
   );

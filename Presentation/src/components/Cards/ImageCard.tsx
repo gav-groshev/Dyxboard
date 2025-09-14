@@ -1,5 +1,5 @@
-import React from "react";
-import { Card } from "../../layout/Card";
+import React from 'react';
+import { Card } from '../../layout/Card';
 
 interface ImageCardProps {
   title: string;
@@ -18,7 +18,7 @@ export const ImageCard: React.FC<ImageCardProps> = ({
   tags = [],
   authorName,
   authorAvatar,
-  date
+  date,
 }) => {
   return (
     <Card className="image-card border-0 p-0">
@@ -29,7 +29,7 @@ export const ImageCard: React.FC<ImageCardProps> = ({
             src={imageUrl}
             alt={title}
             className="h-100 w-100"
-            style={{ objectFit: "cover", display: "block" }}
+            style={{ objectFit: 'cover', display: 'block' }}
           />
         </div>
 
@@ -38,7 +38,7 @@ export const ImageCard: React.FC<ImageCardProps> = ({
           <div className="p-3 d-flex flex-column h-100">
             <h5 className="card-title fw-bold">{title}</h5>
             <p className="card-text text-muted flex-grow-1">
-              {text}{" "}
+              {text}{' '}
               <a href="#" className="text-decoration-none">
                 Read More
               </a>
@@ -48,10 +48,7 @@ export const ImageCard: React.FC<ImageCardProps> = ({
             {tags.length > 0 && (
               <div className="mb-2">
                 {tags.map((tag, index) => (
-                  <span
-                    key={index}
-                    className="badge bg-light text-dark border me-1"
-                  >
+                  <span key={index} className="badge bg-light text-dark border me-1">
                     {tag}
                   </span>
                 ))}

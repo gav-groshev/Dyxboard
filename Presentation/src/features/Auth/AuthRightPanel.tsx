@@ -2,8 +2,10 @@ import { AuthHeader } from './AuthHeader';
 import backgroundImage from '../../assets/images/background.png';
 
 export const AuthRightPanel: React.FC = () => (
-  <div className="auth-right-panel col-lg-6 d-none d-lg-flex flex-column justify-content-center align-items-center bg-side text-center" style={{ position: 'relative' }}>
-    
+  <div
+    className="auth-right-panel col-lg-6 d-none d-lg-flex flex-column justify-content-center align-items-center bg-side text-center"
+    style={{ position: 'relative' }}
+  >
     {/* Фоновый слой */}
     <div
       style={{
@@ -22,6 +24,5 @@ export const AuthRightPanel: React.FC = () => (
     <div style={{ position: 'relative', zIndex: 1, width: '100%' }}>
       <AuthHeader />
     </div>
-
   </div>
 );

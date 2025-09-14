@@ -1,9 +1,9 @@
-import { faBell } from "@fortawesome/free-regular-svg-icons";
-import { useState, useRef, useEffect } from "react";
-import { NotificationItem } from "./NotificationItem";
-import { AppButton, ButtonRadius } from "../../../components/Buttons/AppButton/AppButton";
-import { DropdownMenu } from "../../../components/DropdownMenu/DropdownMenu";
-import { notifications } from "../../../shared/data/notificationsDropdown";
+import { faBell } from '@fortawesome/free-regular-svg-icons';
+import { useState, useRef, useEffect } from 'react';
+import { NotificationItem } from './NotificationItem';
+import { AppButton, ButtonRadius } from '../../../components/Buttons/AppButton/AppButton';
+import { DropdownMenu } from '../../../components/DropdownMenu/DropdownMenu';
+import { notifications } from '../../../shared/data/notificationsDropdown';
 import './Notifications.css';
 
 export const NotificationDropdownToggle = () => {
@@ -18,9 +18,9 @@ export const NotificationDropdownToggle = () => {
       }
     };
 
-    document.addEventListener("mousedown", handleClickOutside);
+    document.addEventListener('mousedown', handleClickOutside);
     return () => {
-      document.removeEventListener("mousedown", handleClickOutside);
+      document.removeEventListener('mousedown', handleClickOutside);
     };
   }, []);
 
@@ -30,18 +30,15 @@ export const NotificationDropdownToggle = () => {
         className="me-1 me-md-3 dxb-size-40"
         radius={ButtonRadius.Circle}
         icon={faBell}
-        onClick={() => setIsOpen(prev => !prev)} // toggle меню
+        onClick={() => setIsOpen((prev) => !prev)} // toggle меню
       />
 
       <span className="position-absolute translate-middle badge rounded-pill bg-danger notification-counter">
         {notifications.length}
       </span>
 
-      <DropdownMenu
-        isOpen={isOpen}
-        className="notification-dropdown"
-      >
-        {notifications.map(n => (
+      <DropdownMenu isOpen={isOpen} className="notification-dropdown">
+        {notifications.map((n) => (
           <NotificationItem key={n.id} notification={n} />
         ))}
 

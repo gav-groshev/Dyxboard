@@ -12,7 +12,6 @@ export interface MenuItem {
 export interface MenuCategory {
   title: string;
   items: MenuItem[];
-  
 }
 
 export const menuCategories: MenuCategory[] = [
@@ -21,13 +20,13 @@ export const menuCategories: MenuCategory[] = [
     items: [
       { label: 'Main Page', href: '/', icon: faHouse },
       { label: 'Profile', href: '/profile', icon: faUser },
-      { 
-        label: 'Planning', 
-        icon: faBullseye ,
-        children:[
+      {
+        label: 'Planning',
+        icon: faBullseye,
+        children: [
           { label: 'Task List', href: '/todo', icon: faListCheck },
           { label: 'Kanban', href: '/kanban', icon: faScroll },
-        ]
+        ],
       },
     ],
   },
