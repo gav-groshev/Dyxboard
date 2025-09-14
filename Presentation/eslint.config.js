@@ -1,23 +1,35 @@
-import js from '@eslint/js'
-import globals from 'globals'
-import reactHooks from 'eslint-plugin-react-hooks'
-import reactRefresh from 'eslint-plugin-react-refresh'
-import tseslint from 'typescript-eslint'
-import { globalIgnores } from 'eslint/config'
+import typescriptEslintParser from "@typescript-eslint/parser";
+import typescriptPlugin from "@typescript-eslint/eslint-plugin";
+import prettierPlugin from "eslint-plugin-prettier";
 
-export default tseslint.config([
-  globalIgnores(['dist']),
+export default [
   {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      js.configs.recommended,
-      tseslint.configs.recommended,
-      reactHooks.configs['recommended-latest'],
-      reactRefresh.configs.vite,
-    ],
+    files: ["**/*.ts", "**/*.tsx"],
     languageOptions: {
-      ecmaVersion: 2020,
-      globals: globals.browser,
+      parser: typescriptEslintParser, // импортированный объект, а не строка
+      parserOptions: {
+        ecmaVersion: 2025,
+        sourceType: "module",
+        ecmaFeatures: { jsx: true }
+      }
     },
-  },
-])
+    plugins: {
+      "@typescript-eslint": typescriptPlugin,
+      "prettier": prettierPlugin
+    },
+    rules: {
+      "@typescript-eslint/no-unused-vars": "warn",
+      "prettier/prettier": [
+        "error",
+        {
+          semi: true,
+          singleQuote: true,
+          trailingComma: "all",
+          printWidth: 100,
+          endOfLine: "auto"
+        }
+      ],
+      "react-refresh/only-export-components": "off"
+    }
+  }
+];
