@@ -1,24 +1,25 @@
 import React from "react";
 import "./DropdownMenu.css";
-import type { DropdownMenuProps } from "./DropdownMenuProps";
+
+interface DropdownMenuProps {
+  isOpen: boolean;
+  children: React.ReactNode;
+  className?: string;
+}
 
 export const DropdownMenu: React.FC<DropdownMenuProps> = ({
-  trigger,
-  items,
-  buttonClassName = "btn dropdown-menu-custom",
-  menuClassName = "dropdown-menu dropdown-menu-end",
-  rootClassName = "dropdown"
+  isOpen,
+  children,
+  className = "",
 }) => {
+  if (!isOpen) return null;
+
   return (
-    <div className={rootClassName}>
-      <div
-        className={buttonClassName}
-        data-bs-toggle="dropdown"
-        aria-expanded="false"
-      >
-        {trigger}
-      </div>
-      <ul className={menuClassName}>{items}</ul>
-    </div>
+    <ul
+      className={`dropdown-menu ${className} show`}
+      style={{ position: "absolute", right: 0 }} 
+    >
+      {children}
+    </ul>
   );
 };

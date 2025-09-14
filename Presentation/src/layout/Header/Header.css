@@ -41,6 +41,18 @@
     left:35px;
 }
 
+.notification-dropdown {
+  position: absolute;
+  top: 100%; /* под кнопкой */
+  right: 0;  /* правая граница меню совпадает с правой границей кнопки */
+  margin-top: 0.5rem; /* отступ сверху */
+  min-width: 200px; /* или ширину по твоему желанию */
+  z-index: 1000;
+}
+
+.dxb-profile-menu-toggle{
+    cursor: pointer;
+}
 @media (max-width: 767.98px) {
     .profilePhoto {
         width: 30px;

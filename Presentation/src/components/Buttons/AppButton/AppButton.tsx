@@ -12,13 +12,14 @@ export enum ButtonRadius {
 }
 
 interface AppButtonProps {
-  onClick?: () => void;
+  onClick?: (event: React.MouseEvent<HTMLButtonElement, MouseEvent>) => void;
   className?: string;              // Дополнительные классы
   radius?: ButtonRadius;           // Скругление
   icon?: IconDefinition;           // FA иконка
   text?: string;                   // Текст (опционально)
   hoverText?: string;              // Подсказка при наведении
   toggle?: boolean;                // Тоггл-эффект
+  children?: React.ReactNode;
 }
 
 export const AppButton: React.FC<AppButtonProps> = ({
@@ -29,15 +30,16 @@ export const AppButton: React.FC<AppButtonProps> = ({
   text,
   hoverText,
   toggle = false,
+  children
 }) => {
   const [toggled, setToggled] = useState(false);
 
-  const handleClick = () => {
-    if (toggle) {
-      setToggled((prev) => !prev);
-    }
-    onClick?.();
-  };
+const handleClick = (event: React.MouseEvent<HTMLButtonElement>) => {
+  if (toggle) {
+    setToggled((prev) => !prev);
+  }
+  onClick?.(event); // передаем event дальше
+};
 
   const radiusClass = {
     [ButtonRadius.None]: "",
@@ -46,18 +48,23 @@ export const AppButton: React.FC<AppButtonProps> = ({
   }[radius];
 
   return (
-    <button
-      onClick={handleClick}
-      className={clsx(
-        "btn btn-outline-light dxb-btn",
-        radiusClass,
-        toggled && "active",
-        className
-      )}
-      title={hoverText}
-    >
-      {icon && <FontAwesomeIcon icon={icon} className={text ? "me-2" : ""} />}
-      {text}
-    </button>
+     <div className="dxb-btn-wrapper position-relative">
+      {children && <div className="dxb-btn-children position-absolute translate-middle">{children}</div>}
+
+      <button
+        onClick={handleClick}
+        className={clsx(
+          "btn btn-outline-light dxb-btn",
+          radiusClass,
+          toggled && "active",
+          className
+        )}
+        title={hoverText}
+      >
+        {icon && <FontAwesomeIcon icon={icon} className={text ? "me-2" : ""} />}
+        {text}
+      </button>
+     </div>
+   
   );
 };
