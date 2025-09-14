@@ -1,0 +1,42 @@
+/* Layout */
+.main-content {
+  padding: 30px;
+}
+
+/* Components */
+.card {
+  border: 1px solid #e9ecef;
+  border-radius: 12px;
+  margin-bottom: 10px;
+}
+
+.profile-avatar {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.btn-edit {
+  padding: 4px 12px;
+  font-size: 14px;
+  border-radius: 20px;
+}
+
+.social-icons .btn {
+  width: 40px;
+  height: 40px;
+  font-size: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .profile-avatar {
+    width: 60px;
+    height: 60px;
+  }
+}

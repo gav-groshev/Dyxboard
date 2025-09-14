@@ -31,7 +31,7 @@ export const ProfileDropdownToggle = () => {
         className="d-flex align-items-center text-decoration-none dropdown-toggle-custom p-md-0 cursor-pointer"
         onClick={() => setIsOpen(prev => !prev)}
       >
-        <img src={user} alt="Profile" className="rounded-circle me-1 me-md-2 profilePhoto" />
+        <img src={user} alt="Profile" className="rounded-circle me-1 me-md-2 dxb-size-40" />
         <span className="d-none d-md-inline">A. Groshev</span>
         <FontAwesomeIcon icon={faChevronDown} className="ms-2 dropdown-icon d-none d-md-inline" />
       </div>

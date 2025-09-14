@@ -1,5 +1,5 @@
 import React from 'react';
-import { NotificationDropdownToggle } from './NotificationDropdownToggle';
+import { NotificationDropdownToggle } from './NotificationToggle/NotificationDropdownToggle';
 import { ThemeSwitcher } from '../../components/ThemeSwitcher/ThemeSwitcher';
 import './Header.css';
 import { ProfileDropdownToggle } from './ProfileDropdownToggle';

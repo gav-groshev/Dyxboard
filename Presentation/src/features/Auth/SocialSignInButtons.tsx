@@ -1,20 +1,10 @@
 import { faGoogle, faVk } from "@fortawesome/free-brands-svg-icons";
-import { Button } from "../../components/Buttons/Button";
+import { AppButton } from "../../components/Buttons/AppButton/AppButton";
 
 export const SocialSignInButtons: React.FC = () => (
   <div className="d-grid gap-2 mb-3">
-    <Button
-      className="auth-btn btn-outline-secondary"
-      icon={faGoogle}
-    >
-      Sign in with Google
-    </Button>
+    <AppButton className="auth-btn btn-outline-secondary" icon={faGoogle} text="Sign in with Google"/>
+    <AppButton className="auth-btn btn-outline-secondary" icon={faVk} text="Sign in with VK"/>
 
-    <Button
-      className="auth-btn btn-outline-secondary"
-      icon={faVk}
-    >
-      Sign in with VK
-    </Button>
   </div>
 );

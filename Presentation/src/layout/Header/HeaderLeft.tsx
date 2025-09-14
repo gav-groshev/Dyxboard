@@ -12,7 +12,7 @@ export const HeaderLeft: React.FC<HeaderLeftProps> = ({ toggleSidebar }) => {
     <div className="d-flex align-items-center mb-2 mb-lg-0 top-bar-left ">
       <AppButton
         onClick={toggleSidebar}
-        className="me-2 sidebar-toggle"
+        className="me-2 dxb-size-40 sidebar-toggle"
         radius={ButtonRadius.Slightly}
         icon={faAlignLeft}
         hoverText="Открыть/закрыть меню"

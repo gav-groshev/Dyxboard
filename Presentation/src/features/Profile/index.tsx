@@ -2,6 +2,8 @@ import React from 'react';
 import UserAvatar from '../../assets/images/owner.png';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faGithub, faInstagram, faVk } from '@fortawesome/free-brands-svg-icons';
+import './Profile.css';
+
 export const ProfilePage: React.FC = () => {
   return (
     <>

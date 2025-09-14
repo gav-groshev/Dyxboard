@@ -3,3 +3,31 @@
     outline: none !important;
     box-shadow: none !important;
 }
+
+
+
+/* Кастомный скроллбар */
+.notification-dropdown::-webkit-scrollbar {
+    width: 8px;
+}
+
+.notification-dropdown::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 10px;
+}
+
+.notification-dropdown::-webkit-scrollbar-thumb {
+    background: #bbb;
+    border-radius: 10px;
+    transition: background 0.3s;
+}
+
+.notification-dropdown::-webkit-scrollbar-thumb:hover {
+    background: #888;
+}
+
+/* Firefox */
+.notification-dropdown {
+    scrollbar-width: thin;
+    scrollbar-color: #bbb #f1f1f1;
+}

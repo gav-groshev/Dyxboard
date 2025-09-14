@@ -1,9 +1,10 @@
 import { faBell } from "@fortawesome/free-regular-svg-icons";
 import { useState, useRef, useEffect } from "react";
 import { NotificationItem } from "./NotificationItem";
-import { AppButton, ButtonRadius } from "../../components/Buttons/AppButton/AppButton";
-import { DropdownMenu } from "../../components/DropdownMenu/DropdownMenu";
-import { notifications } from "../../shared/data/notificationsDropdown";
+import { AppButton, ButtonRadius } from "../../../components/Buttons/AppButton/AppButton";
+import { DropdownMenu } from "../../../components/DropdownMenu/DropdownMenu";
+import { notifications } from "../../../shared/data/notificationsDropdown";
+import './Notifications.css';
 
 export const NotificationDropdownToggle = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -26,7 +27,7 @@ export const NotificationDropdownToggle = () => {
   return (
     <div className="notification-dropdown-wrapper position-relative" ref={wrapperRef}>
       <AppButton
-        className="me-1 me-md-3 btn-circle"
+        className="me-1 me-md-3 dxb-size-40"
         radius={ButtonRadius.Circle}
         icon={faBell}
         onClick={() => setIsOpen(prev => !prev)} // toggle меню

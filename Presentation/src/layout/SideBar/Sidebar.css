@@ -1,45 +1,62 @@
-/* -------------------
+/* ======================================
    Sidebar (desktop)
-------------------- */
+====================================== */
 .sidebar {
   min-height: 100vh;
-  transition: all 0.3s;
-}
-
-.app-sidebar {
-  width: 280px;
-  flex: 0 0 280px;
-  color: #fff;
-  order: 0;
-  transition: all 0.3s;
-  display:none;
-}
-
-.sidebar.collapsed {
-  width: 60px !important;
-}
-
-.sidebar.collapsed .menu-text {
-  display: none;
 }
 
 .sidebar-logo {
   width: 90%;
-  margin:15px;
+  margin: 15px;
   height: auto;
 }
 
+.app-sidebar {
+  flex: 0 0 280px;
+  width: 280px;
+  color: #fff;
+  order: 0;
+  display: none;
+  transition: all 0.3s;
+}
+
 .app-sidebar--visible {
-    display: block;
-  }
+  display: block;
+}
+
+/* ======================================
+   Menu (shared + themes)
+====================================== */
 .menu-text {
   font-size: 0.75rem;
   color: rgb(152 162 179);
 }
 
-/* -------------------
+.menu-item {
+  font-size: 14px;
+  transition: none !important;
+}
+
+[data-bs-theme="light"] .menu-item {
+  color: #344054;
+}
+
+[data-bs-theme="light"] .menu-item:hover {
+  background-color: rgb(242 244 247);
+  color: #344054;
+}
+
+[data-bs-theme="dark"] .menu-item {
+  color: #dee2e6;
+}
+
+[data-bs-theme="dark"] .menu-item:hover {
+  background-color: #ffffff0d;
+}
+
+/* ======================================
    Content (desktop)
-------------------- */
+====================================== */
 .content {
   padding: 20px;
 }
@@ -53,15 +70,11 @@ main {
   padding-left: 15px;
 }
 
-.menu-item {
-  transition: none !important;
-}
-
-/* -------------------
-   Mobile layout <768px
-------------------- */
+/* ======================================
+   Mobile layout (<768px)
+====================================== */
 @media (max-width: 768px) {
-  /* Основная раскладка */
+  /* Layout */
   .app-layout {
     flex-direction: column;
   }
@@ -75,19 +88,16 @@ main {
     position: relative;
     border-bottom: 1px solid rgba(0, 0, 0, 0.1);
 
-    /* центрируем меню */
     flex-direction: column;
     justify-content: center;
     align-items: center;
     text-align: center;
   }
 
-  /* показываем только при видимости */
   .app-sidebar--visible {
     display: flex;
   }
 
-  /* Меню внутри sidebar */
   .app-sidebar > .nav {
     display: block;
     width: 100%;
@@ -103,18 +113,17 @@ main {
     padding-left: 0;
   }
 
-.sidebar-logo {
-  width:60%;
-  margin:auto;
-  height: auto;
-}
+  .sidebar-logo {
+    width: 60%;
+    margin: auto;
+    height: auto;
+  }
 
-  /* Основная часть */
+  /* Content */
   .app-main {
     order: 1;
   }
 
-  /* Content padding уменьшаем */
   main {
     margin: 0;
     padding: 0.5rem;

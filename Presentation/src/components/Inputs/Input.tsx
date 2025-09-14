@@ -32,7 +32,7 @@ export const Input: React.FC<InputProps> = ({
   };
 
   return (
-    <div className={`input-group ${className} icon-input`}>
+    <div className={`input-group ${className} icon-input dxb-height-40`}>
       {buttonPosition === ButtonPosition.LEFT && renderIcon()}
 
       <input className="form-control" {...rest} />

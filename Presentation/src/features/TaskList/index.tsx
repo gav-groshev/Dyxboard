@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { DragDropContext, Droppable, type DropResult } from "@hello-pangea/dnd";
 import TaskFilters from "./TaskFilters";
 import TaskSection from "./TaskSection";
+import './TaskList.css';
 
 interface Task {
   id: string;

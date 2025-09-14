@@ -1,6 +1,7 @@
+
 .icon-input:focus,
 .icon-input:active{
     outline: none !important;
     box-shadow: none !important;
-    border-color: rgb(197, 199, 201);
+    border-color: #c5c7c9;
 }

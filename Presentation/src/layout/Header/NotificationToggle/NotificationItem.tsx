@@ -1,5 +1,5 @@
 import React from "react";
-import { type Notification } from "../../shared/data/notificationsDropdown";
+import { type Notification } from "../../../shared/data/notificationsDropdown";
 
 interface NotificationItemProps {
   notification: Notification;
