@@ -1,16 +1,16 @@
     .notification-dropdown {
-      width: 350px;
+      border-radius: 12px;
+      box-shadow: 0 4px 16px rgb(0 0 0 / 10%);
       max-height: 400px;
       overflow-y: auto;
-      border-radius: 12px;
-      box-shadow: 0 4px 16px rgba(0,0,0,0.1);
+      width: 350px;
     }
 
     .notification-item {
-      display: flex;
       align-items: flex-start;
-      padding: 10px;
       border-bottom: 1px solid #f1f1f1;
+      display: flex;
+      padding: 10px;
     }
 
     .notification-item:last-child {
@@ -18,26 +18,27 @@
     }
 
     .notification-avatar {
-      width: 40px;
-      height: 40px;
       border-radius: 50%;
+      height: 40px;
       margin-right: 10px;
       position: relative;
+      width: 40px;
     }
 
     .notification-counter{
+        left:20px;
         position:absolute;
         top:0;
-        left:20px;
     }
+
     .status-dot {
-      position: absolute;
+      border: 2px solid #fff;
+      border-radius: 50%;
       bottom: 30px;
+      height: 10px;
+      position: absolute;
       right: 0;
       width: 10px;
-      height: 10px;
-      border-radius: 50%;
-      border: 2px solid #fff;
     }
 
     .status-online {
@@ -58,18 +59,18 @@
     }
 
     .notification-time {
-      font-size: 12px;
       color: #888;
+      font-size: 12px;
     }
 
     .view-all {
-      text-align: center;
-      padding: 10px;
       background: #f9f9f9;
+      padding: 10px;
+      text-align: center;
     }
 
     .view-all a {
-      text-decoration: none;
       color: #007bff;
       font-weight: 500;
+      text-decoration: none;
     }

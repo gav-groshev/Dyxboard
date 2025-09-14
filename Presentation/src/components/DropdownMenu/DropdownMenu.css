@@ -1,7 +1,7 @@
 .dropdown-menu-custom:focus,
 .dropdown-menu-custom:active{
-    outline: none !important;
     box-shadow: none !important;
+    outline: none !important;
 }
 
 
@@ -28,6 +28,6 @@
 
 /* Firefox */
 .notification-dropdown {
-    scrollbar-width: thin;
     scrollbar-color: #bbb #f1f1f1;
+    scrollbar-width: thin;
 }

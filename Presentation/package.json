@@ -11,8 +11,9 @@
     "predeploy": "npm run build",
     "deploy": "gh-pages -d dist",
     "lint": "eslint .",
-    "lint:css": "stylelint '**/*.{css,scss,css.ts,css.tsx}'",
-    "lint:css:fix": "stylelint '**/*.{css,scss,tsx}' --fix"
+    "lint:css": "stylelint 'src/**/*.{css,scss}'",
+    "lint:css:fix": "stylelint 'src/**/*.{css,scss}' --fix"
+
   },
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^7.0.0",

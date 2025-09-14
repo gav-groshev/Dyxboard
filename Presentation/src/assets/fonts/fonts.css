@@ -1,132 +1,132 @@
 @font-face {
-  font-family: 'Outfit';
-  src: url('./Outfit.ttf') format('truetype');
-  font-weight: 400;
+  font-family: Outfit;
   font-style: normal;
+  font-weight: 400;
+  src: url('./Outfit.ttf') format('truetype');
 }
 
 /* Thin */
 @font-face {
-  font-family: 'Outfit';
-  src: url('./static/Outfit-Thin.ttf') format('truetype');
-  font-weight: 100;
+  font-family: Outfit;
   font-style: normal;
+  font-weight: 100;
+  src: url('./static/Outfit-Thin.ttf') format('truetype');
 }
 
 /* ExtraLight */
 @font-face {
-  font-family: 'Outfit';
-  src: url('./static/Outfit-ExtraLight.ttf') format('truetype');
-  font-weight: 200;
+  font-family: Outfit;
   font-style: normal;
+  font-weight: 200;
+  src: url('./static/Outfit-ExtraLight.ttf') format('truetype');
 }
 
 /* Light */
 @font-face {
-  font-family: 'Outfit';
-  src: url('./static/Outfit-Light.ttf') format('truetype');
-  font-weight: 300;
+  font-family: Outfit;
   font-style: normal;
+  font-weight: 300;
+  src: url('./static/Outfit-Light.ttf') format('truetype');
 }
 
 /* Regular */
 @font-face {
-  font-family: 'Outfit';
-  src: url('./static/Outfit-Regular.ttf') format('truetype');
-  font-weight: 400;
+  font-family: Outfit;
   font-style: normal;
+  font-weight: 400;
+  src: url('./static/Outfit-Regular.ttf') format('truetype');
 }
 
 /* Medium */
 @font-face {
-  font-family: 'Outfit';
-  src: url('./static/Outfit-Medium.ttf') format('truetype');
-  font-weight: 500;
+  font-family: Outfit;
   font-style: normal;
+  font-weight: 500;
+  src: url('./static/Outfit-Medium.ttf') format('truetype');
 }
 
 /* SemiBold */
 @font-face {
-  font-family: 'Outfit';
-  src: url('./static/Outfit-SemiBold.ttf') format('truetype');
-  font-weight: 600;
+  font-family: Outfit;
   font-style: normal;
+  font-weight: 600;
+  src: url('./static/Outfit-SemiBold.ttf') format('truetype');
 }
 
 /* Bold */
 @font-face {
-  font-family: 'Outfit';
-  src: url('./static/Outfit-Bold.ttf') format('truetype');
-  font-weight: 700;
+  font-family: Outfit;
   font-style: normal;
+  font-weight: 700;
+  src: url('./static/Outfit-Bold.ttf') format('truetype');
 }
 
 /* ExtraBold */
 @font-face {
-  font-family: 'Outfit';
-  src: url('./static/Outfit-ExtraBold.ttf') format('truetype');
-  font-weight: 800;
+  font-family: Outfit;
   font-style: normal;
+  font-weight: 800;
+  src: url('./static/Outfit-ExtraBold.ttf') format('truetype');
 }
 
 /* Black */
 @font-face {
-  font-family: 'Outfit';
-  src: url('./static/Outfit-Black.ttf') format('truetype');
-  font-weight: 900;
+  font-family: Outfit;
   font-style: normal;
+  font-weight: 900;
+  src: url('./static/Outfit-Black.ttf') format('truetype');
 }
 
 .outfit-100 {
-  font-family: "Outfit", sans-serif;
-  font-weight: 100;
+  font-family: Outfit, sans-serif;
   font-style: normal;
+  font-weight: 100;
 }
 
 .outfit-200 {
-  font-family: "Outfit", sans-serif;
-  font-weight: 200;
+  font-family: Outfit, sans-serif;
   font-style: normal;
+  font-weight: 200;
 }
 
 .outfit-300 {
-  font-family: "Outfit", sans-serif;
-  font-weight: 300;
+  font-family: Outfit, sans-serif;
   font-style: normal;
+  font-weight: 300;
 }
 
 .outfit-400 {
-  font-family: "Outfit", sans-serif;
-  font-weight: 400;
+  font-family: Outfit, sans-serif;
   font-style: normal;
+  font-weight: 400;
 }
 
 .outfit-500 {
-  font-family: "Outfit", sans-serif;
-  font-weight: 500;
+  font-family: Outfit, sans-serif;
   font-style: normal;
+  font-weight: 500;
 }
 
 .outfit-600 {
-  font-family: "Outfit", sans-serif;
-  font-weight: 600;
+  font-family: Outfit, sans-serif;
   font-style: normal;
+  font-weight: 600;
 }
 
 .outfit-700 {
-  font-family: "Outfit", sans-serif;
-  font-weight: 700;
+  font-family: Outfit, sans-serif;
   font-style: normal;
+  font-weight: 700;
 }
 
 .outfit-800 {
-  font-family: "Outfit", sans-serif;
-  font-weight: 800;
+  font-family: Outfit, sans-serif;
   font-style: normal;
+  font-weight: 800;
 }
 
 .outfit-900 {
-  font-family: "Outfit", sans-serif;
-  font-weight: 900;
+  font-family: Outfit, sans-serif;
   font-style: normal;
+  font-weight: 900;
 }

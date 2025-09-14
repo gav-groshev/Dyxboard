@@ -1,7 +1,7 @@
 
 .icon-input:focus,
 .icon-input:active{
-    outline: none !important;
-    box-shadow: none !important;
     border-color: #c5c7c9;
+    box-shadow: none !important;
+    outline: none !important;
 }

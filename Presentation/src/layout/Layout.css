@@ -16,6 +16,7 @@
 .card-h-8 { min-height: calc(var(--card-row-height) * 8); }
 
 /* Если хотите жесткую высоту (фиксированную), раскомментируйте: */
+
 /* .card-h-1 { height: calc(var(--card-row-height) * 1); } */
 
 /* Чтобы карточка внутри колонки корректно растягивалась по высоте */
@@ -25,26 +26,27 @@
 
 /* Удобный утилитарный класс для картинок */
 .object-fit-cover {
-  width: 100%;
-  height: 100%;
   display: block;
+  height: 100%;
   object-fit: cover;
+  width: 100%;
 }
 
 /* Гарантируем, что колонка с картинкой растягивает изображение ровно под высоту карточки */
 .col-img-stretch {
   padding: 0; /* убрать отступы, если нужно */
 }
+
 .col-img-stretch > img,
 .col-img-stretch > .object-fit-cover {
-  width: 100%;
+  display: block;
   height: 100%;
   object-fit: cover;
-  display: block;
+  width: 100%;
 }
 
 /* Адаптивность: при мобильных устройствах уменьшаем "ряд" (если нужно) */
-@media (max-width: 767.98px) {
+@media (width <= 767.98px) {
   :root {
     --card-row-height: 80px; /* на мобильных менее высокая единица */
   }

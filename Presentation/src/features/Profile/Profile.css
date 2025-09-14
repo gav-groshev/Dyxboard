@@ -11,32 +11,32 @@
 }
 
 .profile-avatar {
-  width: 80px;
-  height: 80px;
   border-radius: 50%;
+  height: 80px;
   object-fit: cover;
+  width: 80px;
 }
 
 .btn-edit {
-  padding: 4px 12px;
-  font-size: 14px;
   border-radius: 20px;
+  font-size: 14px;
+  padding: 4px 12px;
 }
 
 .social-icons .btn {
-  width: 40px;
-  height: 40px;
-  font-size: 18px;
-  display: flex;
   align-items: center;
-  justify-content: center;
   border-radius: 50%;
+  display: flex;
+  font-size: 18px;
+  height: 40px;
+  justify-content: center;
+  width: 40px;
 }
 
 /* Responsive */
-@media (max-width: 768px) {
+@media (width <= 768px) {
   .profile-avatar {
-    width: 60px;
     height: 60px;
+    width: 60px;
   }
 }

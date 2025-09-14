@@ -1,8 +1,8 @@
 .main-scroll {
   height: calc(100vh - 56px); /* 56px — высота Header */
   overflow-y: auto;
-  scrollbar-width: thin; /* Firefox */
   scrollbar-color: #888 #f1f1f1;
+  scrollbar-width: thin; /* Firefox */
 }
 
 .main-scroll::-webkit-scrollbar {
@@ -24,13 +24,13 @@
 }
 
 .app-main {
-  flex: 1;
-  order: 1;
   display: flex;
+  flex: 1;
   flex-direction: column;
+  order: 1;
 }
 
-@media (max-width: 767.98px) {
+@media (width <= 767.98px) {
   main {
     margin-left: 5px;
     margin-right: 5px;

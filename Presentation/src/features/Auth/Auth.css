@@ -1,6 +1,6 @@
 .signin-description{
-  font-size: 12px;
   color:gray;
+  font-size: 12px;
 }
 
 [data-bs-theme="light"] .bg-side{
@@ -14,8 +14,8 @@
 }
 
 [data-bs-theme="dark"] .auth-btn{
-  color:var(--text-color-dark);
   background-color: var(--background-color-transparent);
+  color:var(--text-color-dark);
 }
 
 [data-bs-theme="light"] .auth-left-panel,

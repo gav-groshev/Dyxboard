@@ -3,8 +3,8 @@
 }
 
 .profile-info small {
-    font-size: 12px;
     color: rgb(102 112 133);
+    font-size: 12px;
 }
 
 .dropdown-toggle-custom::after {
@@ -20,10 +20,10 @@
 }
 
 .dropdown-menu-wide {
-    min-width: 250px;
-    max-width: 350px;
     border-radius: 5%;
     color: rgb(52 64 84);
+    max-width: 350px;
+    min-width: 250px;
 }
 
 .dropdown-menu-wide .icon {
@@ -31,17 +31,17 @@
 }
 
 .notification-counter{
+    left:35px;
     position:absolute;
     top:5px;
-    left:35px;
 }
 
 .notification-dropdown {
-  position: absolute;
-  top: 100%; /* под кнопкой */
-  right: 0;  /* правая граница меню совпадает с правой границей кнопки */
   margin-top: 0.5rem; /* отступ сверху */
   min-width: 200px; /* или ширину по твоему желанию */
+  position: absolute;
+  right: 0;  /* правая граница меню совпадает с правой границей кнопки */
+  top: 100%; /* под кнопкой */
   z-index: 1000;
 }
 
@@ -49,14 +49,16 @@
     cursor: pointer;
     user-select: none;
 }
-@media (max-width: 767.98px) {
+
+@media (width <= 767.98px) {
     .profilePhoto {
-        width: 30px;
         height: 30px;
+        width: 30px;
     }
+
     .btn-circle{
-        width: 30px;
         height: 30px;
+        width: 30px;
     }
 
     .top-bar-left {
@@ -64,10 +66,10 @@
     }
 
     .sidebar-toggle{
-        width:30px;
-        height:30px;
         font-size:10px;
+        height:30px;
         padding:5px;
+        width:30px;
     }
 
     .search-input,
@@ -79,8 +81,8 @@
 
         .search-input input,
     .search-input button{
-        padding:5px;
         font-size:10px;
+        padding:5px;
     }
 
     .profile-dropdown,
