@@ -1,0 +1,22 @@
+{
+  "extends": [
+    "stylelint-config-standard",
+    "stylelint-config-css-modules"
+  ],
+  "plugins": ["stylelint-order"],
+  "rules": {
+    "indentation": 2,
+    "string-quotes": "double",
+    "color-hex-case": "lower",
+    "selector-class-pattern": "^[a-z0-9\\-]+$",
+    "property-no-unknown": [true, {
+      "ignoreProperties": [
+        "font-optical-sizing",
+        "-webkit-text-size-adjust",
+        "clip"
+      ]
+    }],
+    "custom-property-pattern": "^--[a-z0-9\\-]+$",
+    "order/properties-alphabetical-order": true
+  }
+}
