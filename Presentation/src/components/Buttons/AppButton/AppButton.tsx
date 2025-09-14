@@ -4,7 +4,6 @@ import type { IconDefinition } from '@fortawesome/free-solid-svg-icons';
 import clsx from 'clsx';
 import './AppButton.css';
 
-// eslint-disable-next-line react-refresh/only-export-components
 export enum ButtonRadius {
   None = 'none',
   Slightly = 'slightly',
