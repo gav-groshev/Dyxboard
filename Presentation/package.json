@@ -19,6 +19,7 @@
     "@fortawesome/free-solid-svg-icons": "^7.0.0",
     "@fortawesome/react-fontawesome": "^0.2.5",
     "@hello-pangea/dnd": "^18.0.1",
+    "bootstrap": "^5.3.7",
     "gh-pages": "^6.3.0",
     "muuri": "^0.9.5",
     "react": "^19.1.1",
