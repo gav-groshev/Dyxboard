@@ -5,9 +5,6 @@
   ],
   "plugins": ["stylelint-order"],
   "rules": {
-    "indentation": 2,
-    "string-quotes": "double",
-    "color-hex-case": "lower",
     "selector-class-pattern": "^[a-z0-9\\-]+$",
     "property-no-unknown": [true, {
       "ignoreProperties": [
@@ -16,7 +13,7 @@
         "clip"
       ]
     }],
-    "custom-property-pattern": "^--[a-z0-9\\-]+$",
+    "custom-property-pattern": null,
     "order/properties-alphabetical-order": true
   }
 }

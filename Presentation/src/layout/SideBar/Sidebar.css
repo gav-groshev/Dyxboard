@@ -41,13 +41,13 @@
   color: #344054;
 }
 
+[data-bs-theme="dark"] .menu-item {
+  color: #dee2e6;
+}
+
 [data-bs-theme="light"] .menu-item:hover {
   background-color: rgb(242 244 247);
   color: #344054;
-}
-
-[data-bs-theme="dark"] .menu-item {
-  color: #dee2e6;
 }
 
 [data-bs-theme="dark"] .menu-item:hover {

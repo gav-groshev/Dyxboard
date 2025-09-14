@@ -9,16 +9,16 @@
     color: var(--text-color-light);
 }
 
-[data-bs-theme="light"] .dxb-btn:hover
-{
-    background-color:var(--background-color-hover-light);
-    color: var(--text-color-hover-light);
-}
-
 [data-bs-theme="dark"] .dxb-btn{
     background-color: var(--background-color-dark);
     border-color: var(--border-color-dark);
     color: var(--text-color-dark);
+}
+
+[data-bs-theme="light"] .dxb-btn:hover
+{
+    background-color:var(--background-color-hover-light);
+    color: var(--text-color-hover-light);
 }
 
 [data-bs-theme="dark"] .dxb-btn:hover{

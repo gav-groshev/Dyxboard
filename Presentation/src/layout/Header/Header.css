@@ -51,11 +51,6 @@
 }
 
 @media (width <= 767.98px) {
-    .profilePhoto {
-        height: 30px;
-        width: 30px;
-    }
-
     .btn-circle{
         height: 30px;
         width: 30px;
