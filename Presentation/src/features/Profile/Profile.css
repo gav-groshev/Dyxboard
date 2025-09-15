@@ -1,41 +1,25 @@
 /* Layout */
-.main-content {
+.profile-page {
   padding: 30px;
 }
 
 /* Components */
-.card {
+.profile-page__card{
   border: 1px solid #e9ecef;
   border-radius: 12px;
   margin-bottom: 10px;
 }
 
-.profile-avatar {
+.profile-page__avatar {
   border-radius: 50%;
   height: 80px;
   object-fit: cover;
   width: 80px;
 }
 
-.btn-edit {
-  border-radius: 20px;
-  font-size: 14px;
-  padding: 4px 12px;
-}
-
-.social-icons .btn {
-  align-items: center;
-  border-radius: 50%;
-  display: flex;
-  font-size: 18px;
-  height: 40px;
-  justify-content: center;
-  width: 40px;
-}
-
 /* Responsive */
 @media (width <= 768px) {
-  .profile-avatar {
+  .profile-page__avatar {
     height: 60px;
     width: 60px;
   }
