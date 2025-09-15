@@ -3,7 +3,23 @@ import { DragDropContext, type DropResult } from '@hello-pangea/dnd';
 import { KanbanColumn } from './KanbanColumn';
 import logoDark from '../../assets/images/logo_light_w_text.png';
 
-const initialData = {
+interface Task {
+  id: string;
+  title: string;
+  date: string;
+  tag: string;
+  description?: string;
+  image?: string;
+}
+
+// Тип для всего состояния канбана
+interface InitialData {
+  todo: Task[];
+  inprogress: Task[];
+  completed: Task[];
+}
+
+const initialData: InitialData = {
   todo: [
     {
       id: 'task-1',
@@ -36,7 +52,7 @@ const initialData = {
 };
 
 export const KanbanPage: React.FC = () => {
-  const [columns, setColumns] = useState(initialData);
+  const [columns, setColumns] = useState<InitialData>(initialData);
 
   const handleDragEnd = (result: DropResult) => {
     const { source, destination } = result;
