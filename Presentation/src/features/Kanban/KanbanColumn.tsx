@@ -18,10 +18,9 @@ interface ColumnProps {
 }
 
 export const KanbanColumn: React.FC<ColumnProps> = ({ columnId, title, tasks, tagClass }) => {
-  console.log(tasks); // Логируем здесь
   return (
-    <div className="col-md-4 kanban-column">
-      <h6 className="mb-3 d-flex align-items-center">
+    <div className="kanban-column col-md-4">
+      <h6 className="kanban-column__title mb-3 d-flex align-items-center">
         {title}
         <span className={`badge ${tagClass} ms-2`}>{tasks.length}</span>
       </h6>
@@ -30,7 +29,6 @@ export const KanbanColumn: React.FC<ColumnProps> = ({ columnId, title, tasks, ta
         {(provided) => (
           <div {...provided.droppableProps} ref={provided.innerRef}>
             {tasks.map((task, index) => {
-              console.log(task); // Логируем здесь
               return (
                 <Draggable key={task.id} draggableId={task.id} index={index}>
                   {(provided) => (

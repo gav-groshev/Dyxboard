@@ -16,16 +16,22 @@ interface TaskProps {
 
 export const KanbanTask: React.FC<TaskProps> = ({ task }) => {
   return (
-    <div className="card card-task p-3">
-      <p className="mb-1">{task.title}</p>
+    <div className="kanban-task card p-3">
+      <p className="kanban-task__title mb-1">{task.title}</p>
       {/* Описание */}
-      {task.description && <p className="text-muted mb-2 small">{task.description}</p>}
+      {task.description && (
+        <p className="kanban-task__description text-muted mb-2 small">{task.description}</p>
+      )}
 
       {/* Картинка */}
       {task.image && (
-        <img src={task.image} alt="Task illustration" className="img-fluid rounded mb-2" />
+        <img
+          src={task.image}
+          alt="Task illustration"
+          className="kanban-task__image img-fluid rounded mb-2"
+        />
       )}
-      <small className="text-muted">
+      <small className="kanban-task__date text-muted">
         {task.date && (
           <>
             <FontAwesomeIcon icon={faCalendar} /> {task.date}
@@ -33,7 +39,9 @@ export const KanbanTask: React.FC<TaskProps> = ({ task }) => {
         )}
       </small>
       <br />
-      <span className={`badge text-bg-primary mt-2 align-self-start`}>{task.tag}</span>
+      <span className={`kanban-task__badge badge text-bg-primary mt-2 align-self-start`}>
+        {task.tag}
+      </span>
     </div>
   );
 };

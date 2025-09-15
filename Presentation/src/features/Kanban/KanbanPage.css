@@ -2,7 +2,7 @@
       min-width: 280px;
     }
 
-    .card-task {
+    .kanban-task {
       border-radius: 12px;
       box-shadow: 0 2px 6px rgb(0 0 0 / 5%);
       font-family: Outfit, sans-serif;
@@ -10,8 +10,8 @@
       margin-bottom: 1rem;
     }
 
-    .card-task .badge{
-      align-self: flex-start; /* если родитель flex */
-      display: inline-block; /* или inline, если нужно */
-      width: auto;           /* чтобы не растягивался */
+   .kanban-task__badge{
+      align-self: flex-start;
+      display: inline-block;
+      width: auto;
     }
