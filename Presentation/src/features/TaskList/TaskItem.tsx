@@ -13,15 +13,19 @@ const TaskItem: React.FC<TaskItemProps> = ({ title, label, date, comments, avata
   return (
     <div className="card mb-2">
       <div className="task-item d-flex justify-content-between align-items-center p-2">
-        <div className="task-left d-flex align-items-center gap-2">
+        <div className="task-item__text d-flex align-items-center gap-2">
           <i className="fa-solid fa-bars"></i>
-          <input type="checkbox" className="form-check-input" defaultChecked={completed} />
+          <input
+            type="checkbox"
+            className="task-item__checkbox form-check-input"
+            defaultChecked={completed}
+          />
           <span className={completed ? 'text-decoration-line-through' : ''}>{title}</span>
         </div>
-        <div className="task-meta d-flex align-items-center gap-2">
-          {label && <span className="task-label">{label}</span>}
+        <div className="task-item__meta d-flex align-items-center gap-2">
+          {label && <span className="task-item__label">{label}</span>}
           {date && (
-            <span>
+            <span className="task-item__date">
               <i className="bi bi-calendar-event"></i> {date}
             </span>
           )}
@@ -30,7 +34,7 @@ const TaskItem: React.FC<TaskItemProps> = ({ title, label, date, comments, avata
               <i className="bi bi-chat-dots"></i> {comments}
             </span>
           )}
-          {avatar && <img src={avatar} className="avatar rounded-circle" alt="user" />}
+          {avatar && <img src={avatar} className="task-item__avatar rounded-circle" alt="user" />}
         </div>
       </div>
     </div>

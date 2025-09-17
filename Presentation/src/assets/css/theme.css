@@ -1,4 +1,9 @@
 :root{
+    /* colors */
+
+    --color-primary: #4361ee;
+    --color-gray: #6c757d;
+
     /* border */
     --border-color-light: #c5c7c9;
     --border-color-dark: #6c757d;
@@ -14,6 +19,9 @@
     --background-color-hover-light: #f2f4f7;
     --background-color-hover-dark: #ffffff0d;
     --background-color-transparent: transparent;
+    --background-color-primary: #eef3ff;
+
+
 }
 
 
