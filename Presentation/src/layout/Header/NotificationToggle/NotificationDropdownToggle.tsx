@@ -25,27 +25,29 @@ export const NotificationDropdownToggle = () => {
   }, []);
 
   return (
-    <div className="notification-dropdown-wrapper position-relative" ref={wrapperRef}>
-      <AppButton
-        className="me-1 me-md-3 dxb-size-40"
-        radius={ButtonRadius.Circle}
-        icon={faBell}
-        onClick={() => setIsOpen((prev) => !prev)} // toggle меню
-      />
+    <div className="notification-dropdown">
+      <div className="notification-dropdown__wrapper position-relative" ref={wrapperRef}>
+        <AppButton
+          className="notification-dropdown__toggle me-1 me-md-3 dxb-size-40"
+          radius={ButtonRadius.Circle}
+          icon={faBell}
+          onClick={() => setIsOpen((prev) => !prev)} // toggle меню
+        />
 
-      <span className="position-absolute translate-middle badge rounded-pill bg-danger notification-counter">
-        {notifications.length}
-      </span>
+        <span className="notification-dropdown__counter position-absolute translate-middle badge rounded-pill bg-danger ">
+          {notifications.length}
+        </span>
 
-      <DropdownMenu isOpen={isOpen} className="notification-dropdown">
-        {notifications.map((n) => (
-          <NotificationItem key={n.id} notification={n} />
-        ))}
+        <DropdownMenu isOpen={isOpen} className="notification-dropdown__menu">
+          {notifications.map((n) => (
+            <NotificationItem key={n.id} notification={n} />
+          ))}
 
-        <li className="view-all">
-          <a href="#">View All Notifications</a>
-        </li>
-      </DropdownMenu>
+          <li className="notification-dropdown__view-all">
+            <a href="#">View All Notifications</a>
+          </li>
+        </DropdownMenu>
+      </div>
     </div>
   );
 };

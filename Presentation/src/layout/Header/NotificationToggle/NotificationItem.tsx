@@ -7,18 +7,18 @@ interface NotificationItemProps {
 
 export const NotificationItem: React.FC<NotificationItemProps> = ({ notification }) => {
   return (
-    <li className="notification-item">
-      <div className="notification-avatar">
+    <li className="notification-dropdown__item">
+      <div className="notification-dropdown__avatar">
         <img
           src={notification.avatar}
           className="img-fluid rounded-circle"
           alt={notification.name}
         />
-        <span className={`status-dot status-${notification.status}`}></span>
+        <span className={`notification-dropdown__status-dot ${notification.status}`}></span>
       </div>
-      <div className="notification-text">
+      <div className="notification-dropdown__text">
         <strong>{notification.name}</strong> {notification.text}
-        <div className="notification-time">{notification.time}</div>
+        <div className="notification-dropdown__time">{notification.time}</div>
       </div>
     </li>
   );

@@ -36,15 +36,6 @@
     top:5px;
 }
 
-.notification-dropdown {
-  margin-top: 0.5rem; /* отступ сверху */
-  min-width: 200px; /* или ширину по твоему желанию */
-  position: absolute;
-  right: 0;  /* правая граница меню совпадает с правой границей кнопки */
-  top: 100%; /* под кнопкой */
-  z-index: 1000;
-}
-
 .dxb-profile-menu-toggle{
     cursor: pointer;
     user-select: none;
