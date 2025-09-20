@@ -1,7 +1,7 @@
 import { AuthLeftPanel } from './AuthLeftPanel';
 import { AuthRightPanel } from './AuthRightPanel';
-import './Auth.css';
 import { AuthHeader } from './AuthHeader';
+import './Auth.css';
 
 export const SignInPage: React.FC = () => {
   const handleSubmit = (e: React.FormEvent) => {
@@ -11,8 +11,8 @@ export const SignInPage: React.FC = () => {
   };
 
   return (
-    <div className="auth-page container-fluid auth-page position-relative min-vh-100 d-flex flex-column">
-      <div className="row flex-grow-1 position-relative">
+    <div className="auth-page container-fluid">
+      <div className="auth-page__row row">
         <AuthLeftPanel onSubmit={handleSubmit} />
         <AuthRightPanel />
       </div>

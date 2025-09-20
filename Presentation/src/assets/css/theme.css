@@ -1,4 +1,13 @@
 :root{
+    --big-logo-size: 80px;
+
+    /* colors */
+    --background-color-black: #1d2126;
+
+    /* sizes */
+    --medium-font-size: 0.875rem; /* ~14px */
+    --small-font-size: 12px;
+
     /* colors */
 
     --color-primary: #4361ee;
@@ -12,16 +21,16 @@
     --text-color-light: #808080;
     --text-color-hover-light: #344054;
     --text-color-dark: #efefef;
+    --btn-text-color-light: #333;
 
     /* background */
     --background-color-dark: #343a40;
     --background-color-light: #efefef;
     --background-color-hover-light: #f2f4f7;
     --background-color-hover-dark: #ffffff0d;
-    --background-color-transparent: transparent;
     --background-color-primary: #eef3ff;
-
-
+    --background-color-primary-light: #6278e7;
+    --background-color-primary-dark: #0d1b61;
 }
 
 
