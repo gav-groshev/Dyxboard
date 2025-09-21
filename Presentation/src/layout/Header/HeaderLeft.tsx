@@ -9,7 +9,7 @@ interface HeaderLeftProps {
 
 export const HeaderLeft: React.FC<HeaderLeftProps> = ({ toggleSidebar }) => {
   return (
-    <div className="d-flex align-items-center mb-2 mb-lg-0 top-bar-left ">
+    <div className="header__left-menu d-flex align-items-center mb-2 mb-lg-0 top-bar-left ">
       <AppButton
         onClick={toggleSidebar}
         className="me-2 dxb-size-40 sidebar-toggle"
