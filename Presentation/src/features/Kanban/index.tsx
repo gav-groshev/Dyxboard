@@ -3,7 +3,23 @@ import { DragDropContext, type DropResult } from '@hello-pangea/dnd';
 import { KanbanColumn } from './KanbanColumn';
 import logoDark from '../../assets/images/logo_light_w_text.png';
 
-const initialData = {
+interface Task {
+  id: string;
+  title: string;
+  date: string;
+  tag: string;
+  description?: string;
+  image?: string;
+}
+
+// Тип для всего состояния канбана
+interface InitialData {
+  todo: Task[];
+  inprogress: Task[];
+  completed: Task[];
+}
+
+const initialData: InitialData = {
   todo: [
     {
       id: 'task-1',
@@ -36,7 +52,7 @@ const initialData = {
 };
 
 export const KanbanPage: React.FC = () => {
-  const [columns, setColumns] = useState(initialData);
+  const [columns, setColumns] = useState<InitialData>(initialData);
 
   const handleDragEnd = (result: DropResult) => {
     const { source, destination } = result;
@@ -63,14 +79,14 @@ export const KanbanPage: React.FC = () => {
   };
 
   return (
-    <div className="card p-4">
-      <div className="d-flex justify-content-between align-items-center mb-4">
+    <div className="kanban-board card p-4">
+      <div className="kanban-board__filters d-flex justify-content-between align-items-center mb-4">
         <span></span>
-        <div>
-          <button className="btn btn-outline-secondary btn-sm me-2">
+        <div className="kanban-board__actions">
+          <button className="kanban-board__action btn btn-outline-secondary btn-sm me-2">
             <i className="bi bi-funnel"></i> Filter & Sort
           </button>
-          <button className="btn btn-primary btn-sm">
+          <button className="kanban-board__action btn btn-primary btn-sm">
             <i className="bi bi-plus"></i> Add New Task
           </button>
         </div>

@@ -1,4 +1,8 @@
-    .notification-dropdown {
+    .notification-dropdown{
+      position:relative;
+    }
+    
+    .notification-dropdown__menu {
       border-radius: 12px;
       box-shadow: 0 4px 16px rgb(0 0 0 / 10%);
       max-height: 400px;
@@ -6,18 +10,18 @@
       width: 350px;
     }
 
-    .notification-item {
+    .notification-dropdown__item {
       align-items: flex-start;
       border-bottom: 1px solid #f1f1f1;
       display: flex;
       padding: 10px;
     }
 
-    .notification-item:last-child {
+    .notification-dropdown__item:last-child {
       border-bottom: none;
     }
 
-    .notification-avatar {
+    .notification-dropdown__avatar {
       border-radius: 50%;
       height: 40px;
       margin-right: 10px;
@@ -25,13 +29,13 @@
       width: 40px;
     }
 
-    .notification-counter{
-        left:20px;
+    .notification-dropdown__counter{
+        left:35px;
         position:absolute;
-        top:0;
+        top:5px;
     }
 
-    .status-dot {
+    .notification-dropdown__status-dot {
       border: 2px solid #fff;
       border-radius: 50%;
       bottom: 30px;
@@ -41,35 +45,35 @@
       width: 10px;
     }
 
-    .status-online {
+    .notification-dropdown__status--online {
       background-color: #28a745;
     }
 
-    .status-offline {
+    .notification-dropdown__status--offline {
       background-color: #dc3545;
     }
 
-    .notification-text {
+    .notification-dropdown__text {
       flex-grow: 1;
       font-size: 14px;
     }
 
-    .notification-text strong {
+    .notification-dropdown__text strong {
       color: #000;
     }
 
-    .notification-time {
+    .notification-dropdown__time {
       color: #888;
       font-size: 12px;
     }
 
-    .view-all {
+    .notification-dropdown__view-all {
       background: #f9f9f9;
       padding: 10px;
       text-align: center;
     }
 
-    .view-all a {
+    .notification-dropdown__view-all a {
       color: #007bff;
       font-weight: 500;
       text-decoration: none;

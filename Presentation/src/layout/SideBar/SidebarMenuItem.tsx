@@ -22,12 +22,12 @@ export const SidebarMenuItem: React.FC<SidebarMenuItemProps> = ({
   const hasChildren = children && children.length > 0;
 
   return (
-    <li className="nav-item mb-2">
+    <li className="navigation-menu__item mb-2">
       {hasChildren ? (
         <>
           {/* Кнопка раскрытия */}
           <button
-            className="nav-link d-flex align-items-center menu-item w-100 text-start btn btn-link"
+            className="navigation-menu__link d-flex align-items-center menu-item w-100 text-start btn btn-link"
             onClick={() => setOpen((prev) => !prev)}
             aria-expanded={open}
           >
@@ -39,8 +39,11 @@ export const SidebarMenuItem: React.FC<SidebarMenuItemProps> = ({
           {/* Вложенные ссылки с Bootstrap анимацией */}
           <ul className={`nav flex-column ms-4 collapse ${open ? 'show' : ''}`}>
             {children!.map((child) => (
-              <li key={child.label} className="nav-item mb-1">
-                <NavLink to={child.href!} className="nav-link d-flex align-items-center menu-item">
+              <li key={child.label} className="navigation-menu__item mb-1">
+                <NavLink
+                  to={child.href!}
+                  className="navigation-menu__link d-flex align-items-center menu-item"
+                >
                   {child.icon && <FontAwesomeIcon icon={child.icon} className="me-2" />}
                   <span>{child.label}</span>
                 </NavLink>
@@ -50,7 +53,7 @@ export const SidebarMenuItem: React.FC<SidebarMenuItemProps> = ({
         </>
       ) : (
         // Обычный пункт (без вложенных)
-        <NavLink to={href!} className="nav-link d-flex align-items-center menu-item">
+        <NavLink to={href!} className="navigation-menu__link d-flex align-items-center menu-item">
           {icon && <FontAwesomeIcon icon={icon} className="me-2" />}
           <span>{label}</span>
         </NavLink>

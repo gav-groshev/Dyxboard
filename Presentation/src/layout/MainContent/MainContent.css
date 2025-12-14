@@ -1,3 +1,9 @@
+.breadcrumb__item:not(.breadcrumb__item--active)::after {
+  color: #6c757d;    /* можно настроить */
+  content: "/";
+  margin: 0 0.25rem; /* отступ */
+}
+
 .main-scroll {
   height: calc(100vh - 56px); /* 56px — высота Header */
   overflow-y: auto;

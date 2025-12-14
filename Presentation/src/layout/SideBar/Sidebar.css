@@ -27,6 +27,25 @@
 /* ======================================
    Menu (shared + themes)
 ====================================== */
+.navigation-menu__item {
+  display: list-item;
+}
+
+.navigation-menu__link {
+  color: #333;
+  display: block;
+  padding: 0.5rem 1rem;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.navigation-menu__link:hover,
+.navigation-menu__link:focus {
+  color: #007bff;
+  text-decoration: none;
+}
+
+
 .menu-text {
   color: rgb(152 162 179);
   font-size: 0.75rem;
@@ -102,7 +121,7 @@ main {
     width: 100%;
   }
 
-  .app-sidebar .nav .nav-item {
+  .app-sidebar .nav .navigation-menu__item {
     margin: 0.5rem 0;
   }
 

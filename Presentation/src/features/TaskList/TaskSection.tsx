@@ -19,7 +19,7 @@ interface TaskSectionProps {
 
 const TaskSection: React.FC<TaskSectionProps> = ({ title, tasks }) => {
   return (
-    <div className="mt-4">
+    <div className="task-section mt-4">
       <h6 className="fw-bold mb-2">
         {title} <span className="text-muted">{tasks.length}</span>
       </h6>

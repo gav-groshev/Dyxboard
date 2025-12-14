@@ -5,30 +5,30 @@
       padding: 12px 16px;
     }
 
-    .task-left {
+    .task-item__text {
       align-items: center;
       display: flex;
       gap: 10px;
     }
 
-    .task-label {
-      background: #eef3ff;
+    .task-item__label {
+      background: var(--background-color-primary);
       border-radius: 8px;
-      color: #4361ee;
+      color: var(--color-primary);
       font-size: 14px;
       font-weight: 500;
       padding: 3px 10px;
     }
 
-    .task-meta {
+    .task-item__meta {
       align-items: center;
-      color: #6c757d;
+      color: var(--color-gray);
       display: flex;
       font-size: 14px;
       gap: 12px;
     }
 
-    .avatar {
+    .task-item__avatar {
       border-radius: 50%;
       height: 28px;
       object-fit: cover;
@@ -45,14 +45,14 @@
       font-size: 14px;
     }
 
-    .nav-tabs .nav-link {
+    .task-list__filter-item{
       border: none;
-      color: #6c757d;
+      color: var(--color-gray);
       font-weight: 500;
     }
 
-    .nav-tabs .nav-link.active {
+    .task-list__filter-item--active{
       background: transparent;
-      border-bottom: 2px solid #4361ee;
-      color: #4361ee;
+      border-bottom: 2px solid var(--color-primary);
+      color: var(--color-primary);
     }

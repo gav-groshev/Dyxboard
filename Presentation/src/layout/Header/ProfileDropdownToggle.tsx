@@ -23,23 +23,16 @@ export const ProfileDropdownToggle = () => {
   }, []);
 
   return (
-    <div
-      className="dxb-profile-menu-toggle profile-dropdown-wrapper position-relative"
-      ref={wrapperRef}
-    >
-      <div
-        className="d-flex align-items-center text-decoration-none dropdown-toggle-custom p-md-0 cursor-pointer"
-        onClick={() => setIsOpen((prev) => !prev)}
-      >
-        <img src={user} alt="Profile" className="rounded-circle me-1 me-md-2 dxb-size-40" />
-        <span className="d-none d-md-inline">A. Groshev</span>
-        <FontAwesomeIcon icon={faChevronDown} className="ms-2 dropdown-icon d-none d-md-inline" />
+    <div className={`profile-dropdown ${isOpen ? 'profile-dropdown--open' : ''}`} ref={wrapperRef}>
+      <div className="profile-dropdown__toggle" onClick={() => setIsOpen((prev) => !prev)}>
+        <img src={user} alt="Profile" className="profile-dropdown__avatar dxb-size-40" />
+        <div className="profile-dropdown__label">
+          <span className="profile-dropdown__name">A. Groshev</span>
+          <FontAwesomeIcon icon={faChevronDown} className="profile-dropdown__icon" />
+        </div>
       </div>
 
-      <DropdownMenu
-        isOpen={isOpen}
-        className="dropdown-menu dropdown-menu-end dropdown-menu-wide profile-dropdown"
-      >
+      <DropdownMenu isOpen={isOpen} className="profile-dropdown__menu">
         <ProfileDropdownMenu />
       </DropdownMenu>
     </div>

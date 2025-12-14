@@ -8,8 +8,8 @@ interface HeaderProps {
 
 export const Header: React.FC<HeaderProps> = ({ toggleSidebar }) => {
   return (
-    <header className="border-bottom bg-body w-100 px-3 pt-2 pb-0 pb-md-2 ">
-      <div className="row align-items-center">
+    <header className="header border-bottom bg-body w-100 px-3 pt-2 pb-0 pb-md-2 ">
+      <div className="row w-100 align-items-center">
         <div className="col-7 col-md-6 pt-2">
           <HeaderLeft toggleSidebar={toggleSidebar} />
         </div>

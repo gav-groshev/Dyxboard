@@ -47,7 +47,7 @@ export const Breadcrumbs: React.FC = () => {
           return (
             <li
               key={crumb.label}
-              className={`breadcrumb-item ${isLast ? 'active' : ''}`}
+              className={`breadcrumb__item ${isLast ? 'breadcrumb__item--active' : ''}`}
               aria-current={isLast ? 'page' : undefined}
             >
               {crumb.path && !isLast ? <Link to={crumb.path}>{crumb.label}</Link> : crumb.label}
