@@ -1,0 +1,418 @@
+/* Основные стили для Movies Tracker */
+.movies-tracker {
+  --movies-primary: #6f42c1;
+  --movies-secondary: #6610f2;
+  --movies-border: #dee2e6;
+  --movies-card-bg: #fff;
+  --movies-body-bg: #f8f9fa;
+}
+
+[data-bs-theme="dark"] .movies-tracker {
+  --movies-primary: #8a6cef;
+  --movies-secondary: #7c4dff;
+  --movies-border: #495057;
+  --movies-card-bg: #212529;
+  --movies-body-bg: #121416;
+}
+
+.movies-tracker__card {
+  background-color: var(--movies-card-bg);
+  border: 1px solid var(--movies-border);
+  border-radius: 0.5rem;
+  overflow: hidden;
+}
+
+/* Табы */
+.movies-tracker__tabs {
+    background-color: var(--movies-card-bg);
+    border-bottom: 1px solid var(--movies-border);
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.movies-tracker__tab-item {
+  margin: 0;
+}
+
+.movies-tracker__tab-link {
+    align-items: center;
+    background: none;
+    border: none;
+    border-bottom: 3px solid transparent;
+    color: var(--bs-secondary);
+    cursor: pointer;
+    display: flex;
+    font-weight: 500;
+  padding: 1rem 1.5rem;
+  position: relative;
+  transition: all 0.2s;
+}
+
+.movies-tracker__tab-link:hover {
+    background-color: rgb(var(--bs-primary-rgb), 0.05);
+  color: var(--movies-primary);
+}
+
+.movies-tracker__tab-link--active {
+    background-color: rgb(var(--bs-primary-rgb), 0.05);
+    border-bottom-color: var(--movies-primary);
+    color: var(--movies-primary);
+}
+
+/* Контент */
+.movies-tracker__content {
+  padding: 1.5rem;
+}
+
+.movies-tracker__tab-pane {
+  display: none;
+}
+
+.movies-tracker__tab-pane.active {
+  display: block;
+}
+
+/* Статистика */
+.movies-stats__quick-stats {
+  margin-bottom: 2rem;
+}
+
+.movies-stats__stat-card {
+    background: rgb(var(--bs-primary-rgb), 0.05);
+    border: 1px solid var(--movies-border);
+    border-radius: 0.5rem;
+    height: 100%;
+  padding: 1.25rem;
+  text-align: center;
+}
+
+.movies-stats__stat-number {
+    color: var(--movies-primary);
+  font-size: 2.5rem;
+  font-weight: 700;
+  line-height: 1;
+  margin-bottom: 0.5rem;
+}
+
+.movies-stats__stat-label {
+  color: var(--bs-secondary);
+  font-size: 0.875rem;
+  margin-bottom: 0.5rem;
+}
+
+.movies-stats__stat-change {
+  font-size: 0.75rem;
+  opacity: 0.8;
+}
+
+/* Разделы */
+.movies-stats__section-title {
+    border-bottom: 1px solid var(--movies-border);
+  color: var(--movies-primary);
+  font-size: 1.25rem;
+  margin-bottom: 1.5rem;
+  padding-bottom: 0.75rem;
+}
+
+/* Карточки с графиками */
+.movies-stats__chart-card {
+  background-color: var(--movies-card-bg);
+  border: 1px solid var(--movies-border);
+  border-radius: 0.5rem;
+  height: 100%;
+  margin-bottom: 1rem;
+  padding: 1.25rem;
+}
+
+.movies-stats__chart-header {
+    align-items: center;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+}
+
+.movies-stats__chart-title {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin: 0;
+}
+
+.movies-stats__chart-select {
+    font-size: 0.875rem;
+  width: auto;
+}
+
+/* Placeholder графиков */
+.movies-stats__chart-placeholder {
+    align-items: center;
+    display: flex;
+}
+
+.movies-stats__placeholder-graph {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    justify-content: flex-end;
+  width: 100%;
+}
+
+.movies-stats__graph-bars {
+    align-items: flex-end;
+  display: flex;
+  height: 80%;
+  justify-content: space-around;
+  padding: 0 1rem;
+}
+
+.movies-stats__graph-bar {
+    background: linear-gradient(to top, var(--movies-primary), var(--movies-secondary));
+    border-radius: 4px 4px 0 0;
+    position: relative;
+    transition: height 0.3s;
+  width: 40px;
+}
+
+.movies-stats__graph-bar::after {
+    color: var(--bs-secondary);
+  content: attr(data-count);
+  font-size: 0.75rem;
+  left: 50%;
+  position: absolute;
+  top: -25px;
+  transform: translateX(-50%);
+}
+
+.movies-stats__graph-labels {
+    border-top: 1px solid var(--movies-border);
+  display: flex;
+  justify-content: space-around;
+  padding: 0.5rem 1rem;
+}
+
+.movies-stats__graph-labels span {
+    color: var(--bs-secondary);
+  font-size: 0.875rem;
+}
+
+/* Donut chart placeholder */
+.movies-stats__placeholder-donut {
+    align-items: center;
+    display: flex;
+    height: 100%;
+    justify-content: center;
+  width: 100%;
+}
+
+.movies-stats__donut-chart {
+    background: conic-gradient(
+    #4e79a7 0% calc(var(--percentage, 0%)),
+    #f28e2c calc(var(--percentage, 0%)) calc(var(--percentage, 0%) * 2),
+    #e15759 calc(var(--percentage, 0%) * 2) calc(var(--percentage, 0%) * 3),
+    #76b7b2 calc(var(--percentage, 0%) * 3) calc(var(--percentage, 0%) * 4),
+    #59a14f calc(var(--percentage, 0%) * 4) 100%
+    );
+    border-radius: 50%;
+    height: 160px;
+    position: relative;
+    width: 160px;
+}
+
+.movies-stats__donut-center {
+    align-items: center;
+    background: var(--movies-card-bg);
+    border-radius: 50%;
+    display: flex;
+    flex-direction: column;
+    height: 80px;
+    justify-content: center;
+    left: 50%;
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 80px;
+}
+
+.movies-stats__donut-total {
+    color: var(--movies-primary);
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+.movies-stats__donut-label {
+    color: var(--bs-secondary);
+  font-size: 0.75rem;
+}
+
+/* Легенда и список жанров */
+.movies-stats__chart-footer {
+    border-top: 1px solid var(--movies-border);
+  margin-top: 1rem;
+  padding-top: 1rem;
+}
+
+.movies-stats__chart-legend {
+    display: flex;
+    flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.movies-stats__legend-item {
+    align-items: center;
+    color: var(--bs-secondary);
+  display: flex;
+  font-size: 0.875rem;
+}
+
+.movies-stats__genre-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.movies-stats__genre-item {
+    align-items: center;
+  display: flex;
+  gap: 0.75rem;
+}
+
+.movies-stats__genre-color {
+    border-radius: 2px;
+    height: 12px;
+  width: 12px;
+}
+
+.movies-stats__genre-color--1 { background-color: #4e79a7; }
+.movies-stats__genre-color--2 { background-color: #f28e2c; }
+.movies-stats__genre-color--3 { background-color: #e15759; }
+.movies-stats__genre-color--4 { background-color: #76b7b2; }
+.movies-stats__genre-color--5 { background-color: #59a14f; }
+
+.movies-stats__genre-name {
+  flex: 1;
+  font-size: 0.875rem;
+}
+
+.movies-stats__genre-count {
+    color: var(--movies-primary);
+  font-weight: 600;
+}
+
+/* Распределение оценок */
+.movies-stats__ratings-distribution {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.movies-stats__rating-row {
+    align-items: center;
+  display: flex;
+  gap: 1rem;
+}
+
+.movies-stats__rating-stars {
+  color: #ffc107;
+  font-size: 0.875rem;
+  width: 60px;
+}
+
+.movies-stats__rating-bar {
+    background-color: rgb(var(--bs-secondary-rgb), 0.1);
+    border-radius: 10px;
+  flex: 1;
+  height: 20px;
+  overflow: hidden;
+}
+
+.movies-stats__rating-fill {
+    background: linear-gradient(to right, var(--movies-primary), var(--movies-secondary));
+    border-radius: 10px;
+  height: 100%;
+}
+
+.movies-stats__rating-count {
+    color: var(--movies-primary);
+    font-weight: 600;
+    text-align: right;
+    width: 40px;
+}
+
+/* Топ список */
+.movies-stats__top-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  width:100%;
+}
+
+.movies-stats__top-item {
+    align-items: center;
+    background-color: rgb(var(--bs-secondary-rgb), 0.05);
+    border-radius: 0.5rem;
+  display: flex;
+  gap: 1rem;
+  padding: 0.75rem;
+}
+
+.movies-stats__top-rank {
+    align-items: center;
+    background-color: var(--movies-primary);
+    border-radius: 50%;
+    color: white;
+    display: flex;
+    font-size: 0.875rem;
+    font-weight: 700;
+    height: 32px;
+    justify-content: center;
+    width: 32px;
+}
+
+.movies-stats__top-info {
+  flex: 1;
+}
+
+.movies-stats__top-name {
+  font-weight: 600;
+  margin-bottom: 0.125rem;
+}
+
+.movies-stats__top-details {
+    color: var(--bs-secondary);
+  font-size: 0.75rem;
+  opacity: 0.8;
+}
+
+.movies-stats__top-count {
+    color: var(--movies-primary);
+  font-weight: 700;
+}
+
+/* Адаптивность */
+@media (width <= 768px) {
+  .movies-tracker__tabs {
+      flex-wrap: nowrap;
+    overflow-x: auto;
+  }
+  
+  .movies-tracker__tab-link {
+      font-size: 0.9rem;
+    padding: 0.75rem 1rem;
+    white-space: nowrap;
+  }
+  
+  .movies-stats__stat-number {
+    font-size: 2rem;
+  }
+  
+  .movies-stats__chart-header {
+      align-items: flex-start;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  
+  .movies-stats__chart-select {
+    width: 100%;
+  }
+}

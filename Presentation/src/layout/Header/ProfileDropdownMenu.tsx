@@ -5,7 +5,7 @@ import {
   faCircleInfo,
   faArrowRightFromBracket,
 } from '@fortawesome/free-solid-svg-icons';
-import { Link } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
 
 export const ProfileDropdownMenu = () => {
   return (
@@ -15,14 +15,20 @@ export const ProfileDropdownMenu = () => {
         <small className="profile-info__email">gav.groshev@gmail.com</small>
       </li>
       <li>
-        <a className="profile-dropdown__item" href="#">
+        <NavLink
+          to="/profile"
+          className={({ isActive }) => `profile-dropdown__item ${isActive ? 'active' : ''}`}
+        >
           <FontAwesomeIcon icon={faUser} /> Edit profile
-        </a>
+        </NavLink>
       </li>
       <li>
-        <a className="profile-dropdown__item" href="#">
+        <NavLink
+          to="/site-settings"
+          className={({ isActive }) => `profile-dropdown__item ${isActive ? 'active' : ''}`}
+        >
           <FontAwesomeIcon icon={faGear} /> Account settings
-        </a>
+        </NavLink>
       </li>
       <li>
         <a className="profile-dropdown__item" href="#">

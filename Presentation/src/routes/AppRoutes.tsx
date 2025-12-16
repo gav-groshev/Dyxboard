@@ -7,6 +7,8 @@ import { KanbanPage } from '../features/Kanban';
 import { AppLayout } from '../layout/AppLayout';
 import { SignInPage } from '../features/Auth/SignInPage';
 import { MainPage } from '../features/MainPage/MainPage';
+import SiteSettings from '../features/SiteSettings';
+import FilmsPage from '../features/FilmsPage';
 
 export const AppRoutes = () => (
   <Routes>
@@ -20,6 +22,8 @@ export const AppRoutes = () => (
       <Route path="profile" element={<ProfilePage />} />
       <Route path="todo" element={<TaskList />} />
       <Route path="kanban" element={<KanbanPage />} />
+      <Route path="site-settings" element={<SiteSettings />} />
+      <Route path="films" element={<FilmsPage />} />
     </Route>
 
     {/* опционально: редирект на / */}

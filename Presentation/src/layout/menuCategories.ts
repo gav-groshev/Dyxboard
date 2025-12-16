@@ -1,4 +1,4 @@
-import { faBullseye, faHouse, faScroll, faUser } from '@fortawesome/free-solid-svg-icons';
+import { faBullseye, faHouse, faScroll, faGear } from '@fortawesome/free-solid-svg-icons';
 import { faListCheck } from '@fortawesome/free-solid-svg-icons';
 import type { IconDefinition } from '@fortawesome/fontawesome-svg-core';
 
@@ -7,6 +7,7 @@ export interface MenuItem {
   href?: string;
   icon: IconDefinition;
   children?: MenuItem[];
+  isHidden?: boolean;
 }
 
 export interface MenuCategory {
@@ -19,7 +20,6 @@ export const menuCategories: MenuCategory[] = [
     title: 'MENU',
     items: [
       { label: 'Main Page', href: '/', icon: faHouse },
-      { label: 'Profile', href: '/profile', icon: faUser },
       {
         label: 'Planning',
         icon: faBullseye,
@@ -33,7 +33,8 @@ export const menuCategories: MenuCategory[] = [
   {
     title: 'OTHERS',
     items: [
-      // Здесь можно добавлять новые элементы
+      { label: 'Настройки приложения', href: '/site-settings', icon: faGear, isHidden: true },
+      { label: 'Фильмы', href: '/films', icon: faGear },
     ],
   },
 ];

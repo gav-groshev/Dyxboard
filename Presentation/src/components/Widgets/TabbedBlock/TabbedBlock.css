@@ -1,0 +1,84 @@
+[data-bs-theme="dark"] {
+  --border-color: #495057;
+}
+
+.tabbed-block {
+    background: var(--card-bg);
+    border: 1px solid var(--border-color);
+  border-radius: 0.5rem;
+  overflow: hidden;
+}
+
+.tabbed-block__header {
+  border-bottom: 1px solid var(--border-color);
+  padding: 0 1.5rem;
+}
+
+.tabbed-block__tabs {
+  display: flex;
+  gap: 1rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.tabbed-block__tab-item {
+  margin: 0;
+}
+
+.tabbed-block__tab {
+    align-items: center;
+    background: none;
+    border: none;
+    border-bottom: 3px solid transparent;
+    color: var(--bs-secondary);
+    cursor: pointer;
+    display: flex;
+    font-weight: 500;
+  padding: 1rem 0;
+  position: relative;
+  transition: color 0.2s;
+}
+
+.tabbed-block__tab:hover:not(.tabbed-block__tab--disabled) {
+  color: var(--bs-primary);
+}
+
+.tabbed-block__tab--active {
+    border-bottom-color: var(--bs-primary);
+  color: var(--bs-primary);
+}
+
+.tabbed-block__tab--disabled {
+    cursor: not-allowed;
+  opacity: 0.5;
+}
+
+.tabbed-block__tab--pills {
+    border-bottom: none !important;
+    border-radius: 2rem;
+    padding: 0.5rem 1rem;
+}
+
+.tabbed-block__tab--pills.tabbed-block__tab--active {
+  background-color: var(--bs-primary);
+  color: white;
+}
+
+.tabbed-block__tab--underline {
+  border-bottom: 2px solid transparent;
+  padding-bottom: 0.75rem;
+}
+
+.tabbed-block__badge {
+    background: var(--bs-secondary);
+    border-radius: 1rem;
+    color: white;
+    font-size: 0.75rem;
+  margin-left: 0.5rem;
+  padding: 0.125rem 0.5rem;
+}
+
+.tabbed-block__content {
+  padding: 1.5rem;
+}
